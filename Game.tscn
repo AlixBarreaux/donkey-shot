@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Fonts/pasti_regular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Game" type="Node"]
+
+[node name="InGameGUICanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="InGameGUI" type="Control" parent="InGameGUICanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="InGameGUICanvasLayer/InGameGUI"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="InGameGUICanvasLayer/InGameGUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="HBoxContainer" parent="InGameGUICanvasLayer/InGameGUI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -260.0
+margin_top = -151.0
+margin_right = 259.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextLabel" type="Label" parent="InGameGUICanvasLayer/InGameGUI/ScoreLabel"]
+margin_left = 142.0
+margin_top = 50.0
+margin_right = 291.0
+margin_bottom = 101.0
+custom_fonts/font = SubResource( 1 )
+text = "score: "
+align = 1
+valign = 1
+
+[node name="ScoreCountLabel" type="Label" parent="InGameGUICanvasLayer/InGameGUI/ScoreLabel"]
+margin_left = 295.0
+margin_top = 50.0
+margin_right = 376.0
+margin_bottom = 101.0
+custom_fonts/font = SubResource( 1 )
+text = "000"
+align = 1
+valign = 1
+
+[node name="World" parent="." instance=ExtResource( 1 )]
