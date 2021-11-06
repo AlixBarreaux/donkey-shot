@@ -24,12 +24,9 @@ projectile_scene = ExtResource( 5 )
 position = Vector2( 16, 0 )
 
 [node name="ProjectileSpawnTimer" type="Timer" parent="MobSpawnLocations"]
-wait_time = 0.3
-autostart = true
 script = ExtResource( 4 )
 
 [node name="SpawningPaceTimer" type="Timer" parent="MobSpawnLocations"]
-autostart = true
 script = ExtResource( 7 )
 
 [node name="Projectiles" type="Node2D" parent="."]
@@ -49,7 +46,6 @@ rotation_speed = 0.02
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 868.001, 993.357 )
-current_speed = 1000
 
 [connection signal="max_spawn_pace_reached" from="MobSpawnLocations/ProjectileSpawnTimer" to="MobSpawnLocations/SpawningPaceTimer" method="_on_ProjectileSpawnTimer_max_spawn_pace_reached"]
 [connection signal="timeout" from="MobSpawnLocations/ProjectileSpawnTimer" to="MobSpawnLocations" method="_on_ProjectileSpawnTimer_timeout"]

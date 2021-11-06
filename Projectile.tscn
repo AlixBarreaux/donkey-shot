@@ -21,3 +21,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 self_modulate = Color( 1, 0.678431, 0, 1 )
 texture = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

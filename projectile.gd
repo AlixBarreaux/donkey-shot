@@ -8,6 +8,9 @@ extends RigidBody2D
 export var score_value: int = 10
 
 
+# Node References
+onready var visibility_notifier_2d: VisibilityNotifier2D = $VisibilityNotifier2D
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 
@@ -16,6 +19,13 @@ export var score_value: int = 10
 
 
 func die() -> void:
-#	modulate.a = 0.3
-	Global.increase_score(self.score_value)
+	Global.increase_current_score(self.score_value)
+	
+	# "Disable" the VisibilityNotifier2D in order to avoid triggering the
+	# screen_exited signal and decrease the current lives 
+	visibility_notifier_2d.disconnect("screen_exited", self, "_on_VisibilityNotifier2D_screen_exited")
 	self.queue_free()
+
+
+func _on_VisibilityNotifier2D_screen_exited() -> void:
+	Global.decrease_current_lives(1)

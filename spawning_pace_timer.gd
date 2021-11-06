@@ -8,13 +8,24 @@ extends Timer
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
+onready var signals_connections_list: PoolIntArray = [
+	Events.connect("game_started", self, "on_game_started")
+	]
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 
 
+func _ready() -> void:
+	GeneralHelpers.check_for_signals_initialization_errors(self, signals_connections_list)
+
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
+
+func on_game_started() -> void:
+	print(self.name + ": Started")
+	self.start()
 
 
 func _on_ProjectileSpawnTimer_max_spawn_pace_reached() -> void:
