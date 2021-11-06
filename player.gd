@@ -23,11 +23,14 @@ func rotate(rotation_input: float) -> void:
 	print(rotation_input)
 #	self.rotation_degrees += self.rotation_speed
 #	self.rotate(self.rotation_speed * rotation_input)
+	rotation += rotation_speed * rotation_input
 
-func _physics_process(delta: float) -> void:
+
+#func _physics_process(delta: float) -> void:
 #	self.rotate(0.03 * -1)
 #	self.rotate(rotation_speed)
-	rotation = rotation_speed * delta
+#	rotation = 0.5 * delta
+	
 
 # ------------------------------ DECLARE FUNCTIONS ----------------------
 

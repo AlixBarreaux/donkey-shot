@@ -16,16 +16,16 @@ var score: int = 0 setget set_score, get_score
 
 
 func decrease_score(value: int) -> void:
-	self.set_score(self.score - value)
+	set_score(score - value)
 
 
 func increase_score(value: int) -> void:
-	self.set_score(self.score + value)
+	set_score(score + value)
 
 
 func set_score(value: int) -> void:
-	self.score = value
+	score = value
 
 
 func get_score() -> int:
-	return self.score
+	return score

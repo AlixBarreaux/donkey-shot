@@ -47,11 +47,14 @@ __meta__ = {
 }
 
 [node name="Projectile" type="RigidBody2D" parent="."]
-position = Vector2( 260.054, 716.334 )
+position = Vector2( 344.144, 223.569 )
 collision_layer = 2
 collision_mask = 5
 gravity_scale = 4.0
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Projectile"]
 shape = SubResource( 1 )
@@ -61,5 +64,6 @@ self_modulate = Color( 1, 0.678431, 0, 1 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 342.689, 510.698 )
 
 [connection signal="body_entered" from="Mill/Basket/ProjectileDetector" to="Mill/Basket/ProjectileDetector" method="_on_ProjectileDetector_body_entered"]

@@ -73,6 +73,11 @@ run/main_scene="res://Scenes/World.tscn"
 config/icon="res://Miscellaneous/icon.png"
 config/version=1
 
+[autoload]
+
+Global="*res://Singletons/global.gd"
+Settings="*res://Singletons/settings.gd"
+
 [display]
 
 window/size/width=1920
