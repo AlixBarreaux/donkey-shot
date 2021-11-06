@@ -41,3 +41,10 @@ func _initialize() -> void:
 
 func _on_PlayAgainButton_pressed() -> void:
 	Events.emit_signal("game_restarted")
+
+
+func _on_GameOverMenu_visibility_changed() -> void:
+	if self.visible:
+		self.first_button_to_focus.grab_focus()
+	else:
+		self.first_button_to_focus.release_focus()

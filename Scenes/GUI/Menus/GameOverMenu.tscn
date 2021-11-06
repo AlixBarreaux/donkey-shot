@@ -76,4 +76,5 @@ focus_neighbour_bottom = NodePath("../PlayAgainButton")
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
 
+[connection signal="visibility_changed" from="." to="." method="_on_GameOverMenu_visibility_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
