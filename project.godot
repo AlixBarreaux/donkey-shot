@@ -32,12 +32,12 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "GetReadyMenu",
 "language": "GDScript",
-"path": "res://get_ready_menu.gd"
+"path": "res://Scripts/get_ready_menu.gd"
 }, {
 "base": "AudioStreamPlayer",
 "class": "InGameMusicPlayer",
 "language": "GDScript",
-"path": "res://in_game_music_player.gd"
+"path": "res://Scripts/in_game_music_player.gd"
 }, {
 "base": "HBoxContainer",
 "class": "LivesGUI",
@@ -52,37 +52,37 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://player.gd"
+"path": "res://Scripts/player.gd"
 }, {
 "base": "Node",
 "class": "PlayerController",
 "language": "GDScript",
-"path": "res://player_controller.gd"
+"path": "res://Scripts/player_controller.gd"
 }, {
 "base": "RigidBody2D",
 "class": "Projectile",
 "language": "GDScript",
-"path": "res://projectile.gd"
+"path": "res://Scripts/projectile.gd"
 }, {
 "base": "Area2D",
 "class": "ProjectileDetector",
 "language": "GDScript",
-"path": "res://projectile_detector.gd"
+"path": "res://Scripts/projectile_detector.gd"
 }, {
 "base": "Node2D",
 "class": "ProjectileManager",
 "language": "GDScript",
-"path": "res://projectiles_manager.gd"
+"path": "res://Scripts/projectiles_manager.gd"
 }, {
 "base": "Path2D",
 "class": "ProjectileSpawnLocations",
 "language": "GDScript",
-"path": "res://projectile_spawn_locations.gd"
+"path": "res://Scripts/projectile_spawn_locations.gd"
 }, {
 "base": "Timer",
 "class": "ProjectileSpawnTimer",
 "language": "GDScript",
-"path": "res://projectile_spawn_timer.gd"
+"path": "res://Scripts/projectile_spawn_timer.gd"
 }, {
 "base": "Button",
 "class": "QuitToDesktopButton",
@@ -102,12 +102,12 @@ _global_script_classes=[ {
 "base": "Timer",
 "class": "SpawningPaceTimer",
 "language": "GDScript",
-"path": "res://spawning_pace_timer.gd"
+"path": "res://Scripts/spawning_pace_timer.gd"
 }, {
 "base": "Sprite",
 "class": "Turbine_Rotator",
 "language": "GDScript",
-"path": "res://turbine_rotator.gd"
+"path": "res://Scripts/turbine_rotator.gd"
 } ]
 _global_script_class_icons={
 "GameOverMenu": "",
@@ -135,9 +135,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Donkey Shot"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://Scenes/Game.tscn"
 config/icon="res://Miscellaneous/icon.png"
 config/version=1
+
+[audio]
+
+default_bus_layout="res://Resources/default_bus_layout.tres"
 
 [autoload]
 

@@ -49,31 +49,47 @@ __meta__ = {
 
 [node name="ResumeButton" type="Button" parent="VBoxContainer"]
 margin_right = 860.0
-margin_bottom = 125.0
+margin_bottom = 92.0
+focus_neighbour_left = NodePath("../QuitToDesktopButton")
+focus_neighbour_top = NodePath("../QuitToDesktopButton")
+focus_neighbour_right = NodePath("../OptionsButton")
+focus_neighbour_bottom = NodePath("../OptionsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "resume"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
-margin_top = 165.0
+margin_top = 132.0
 margin_right = 860.0
-margin_bottom = 291.0
+margin_bottom = 225.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 disabled = true
 text = "options"
 
-[node name="QuitToMainMenu" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 331.0
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+margin_top = 265.0
 margin_right = 860.0
-margin_bottom = 457.0
+margin_bottom = 357.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "credits"
+
+[node name="QuitToMainMenu" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 397.0
+margin_right = 860.0
+margin_bottom = 490.0
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/MainMenu.tscn"
 
 [node name="QuitToDesktopButton" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 497.0
+margin_top = 530.0
 margin_right = 860.0
 margin_bottom = 623.0
+
+[node name="MenusToDisplay" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_PauseMenu_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]

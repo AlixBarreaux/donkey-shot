@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Miscellaneous/icon.png" type="Texture" id=2]
-[ext_resource path="res://turbine_rotator.gd" type="Script" id=3]
-[ext_resource path="res://projectile_spawn_timer.gd" type="Script" id=4]
-[ext_resource path="res://Projectile.tscn" type="PackedScene" id=5]
-[ext_resource path="res://projectile_spawn_locations.gd" type="Script" id=6]
-[ext_resource path="res://spawning_pace_timer.gd" type="Script" id=7]
-[ext_resource path="res://projectiles_manager.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/turbine_rotator.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/projectile_spawn_timer.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Projectile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/projectile_spawn_locations.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/spawning_pace_timer.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/projectiles_manager.gd" type="Script" id=8]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -49,6 +49,5 @@ rotation_speed = 0.02
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 868.001, 993.357 )
 
-[connection signal="max_spawn_pace_reached" from="MobSpawnLocations/ProjectileSpawnTimer" to="MobSpawnLocations/SpawningPaceTimer" method="_on_ProjectileSpawnTimer_max_spawn_pace_reached"]
 [connection signal="timeout" from="MobSpawnLocations/ProjectileSpawnTimer" to="MobSpawnLocations" method="_on_ProjectileSpawnTimer_timeout"]
 [connection signal="timeout" from="MobSpawnLocations/SpawningPaceTimer" to="MobSpawnLocations/ProjectileSpawnTimer" method="_on_SpawningPaceTimer_timeout"]

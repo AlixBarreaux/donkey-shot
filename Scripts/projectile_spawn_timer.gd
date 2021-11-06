@@ -11,7 +11,8 @@ export var time_decrease: float = 0.1
 export var min_wait_time: float = 0.1
 
 onready var signals_connections_list: PoolIntArray = [
-	Events.connect("game_started", self, "on_game_started")
+	Events.connect("game_started", self, "on_game_started"),
+	Events.connect("game_over", self, "on_game_over")
 	]
 
 signal max_spawn_pace_reached
@@ -31,6 +32,11 @@ func _ready() -> void:
 func on_game_started() -> void:
 	print(self.name + ": Started")
 	self.start()
+
+
+func on_game_over() -> void:
+	print(self.name + ": Game over!")
+	self.stop()
 
 
 func _on_SpawningPaceTimer_timeout() -> void:

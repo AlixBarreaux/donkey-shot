@@ -9,7 +9,8 @@ extends Timer
 
 
 onready var signals_connections_list: PoolIntArray = [
-	Events.connect("game_started", self, "on_game_started")
+	Events.connect("game_started", self, "on_game_started"),
+	Events.connect("game_over", self, "on_game_over")
 	]
 
 
@@ -26,6 +27,11 @@ func _ready() -> void:
 func on_game_started() -> void:
 	print(self.name + ": Started")
 	self.start()
+
+
+func on_game_over() -> void:
+	print(self.name + ": Game over!")
+	self.stop()
 
 
 func _on_ProjectileSpawnTimer_max_spawn_pace_reached() -> void:

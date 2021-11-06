@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Sound/Music/donkey_shot_test_ingame_v1.ogg" type="AudioStream" id=1]
-[ext_resource path="res://in_game_music_player.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/in_game_music_player.gd" type="Script" id=2]
 
 [node name="InGameMusicPlayer" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )

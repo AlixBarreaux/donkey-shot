@@ -49,17 +49,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RetryButton" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="PlayAgainButton" parent="ColorRect/VBoxContainer" instance=ExtResource( 2 )]
 margin_top = 149.0
 margin_right = 740.0
 margin_bottom = 268.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "retry"
+focus_neighbour_left = NodePath("../QuitToMainMenuButton")
+focus_neighbour_top = NodePath("../QuitToMainMenuButton")
+focus_neighbour_right = NodePath("../QuitToMainMenuButton")
+focus_neighbour_bottom = NodePath("../QuitToMainMenuButton")
+text = "play again"
+scene_to_load_path = "res://Game.tscn"
 
 [node name="QuitToMainMenuButton" parent="ColorRect/VBoxContainer" instance=ExtResource( 2 )]
 margin_top = 298.0
 margin_right = 740.0
 margin_bottom = 417.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/MainMenu.tscn"
