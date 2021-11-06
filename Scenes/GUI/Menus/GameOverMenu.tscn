@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+first_button_to_focus_node_path = NodePath("ColorRect/VBoxContainer/PlayAgainButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_left = 0.5
@@ -68,10 +69,10 @@ scene_to_load_path = "res://Scenes/Game.tscn"
 margin_top = 298.0
 margin_right = 740.0
 margin_bottom = 417.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath(".")
+focus_neighbour_left = NodePath("../PlayAgainButton")
+focus_neighbour_top = NodePath("../PlayAgainButton")
+focus_neighbour_right = NodePath("../PlayAgainButton")
+focus_neighbour_bottom = NodePath("../PlayAgainButton")
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
 

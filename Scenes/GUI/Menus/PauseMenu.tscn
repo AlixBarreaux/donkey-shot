@@ -66,6 +66,10 @@ text = "resume"
 margin_top = 165.0
 margin_right = 860.0
 margin_bottom = 291.0
+focus_neighbour_left = NodePath("../ResumeButton")
+focus_neighbour_top = NodePath("../ResumeButton")
+focus_neighbour_right = NodePath("../QuitToMainMenu")
+focus_neighbour_bottom = NodePath("../QuitToMainMenu")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 disabled = true
@@ -75,6 +79,10 @@ text = "options"
 margin_top = 331.0
 margin_right = 860.0
 margin_bottom = 457.0
+focus_neighbour_left = NodePath("../OptionsButton")
+focus_neighbour_top = NodePath("../OptionsButton")
+focus_neighbour_right = NodePath("../QuitToDesktopButton")
+focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
 
@@ -82,6 +90,10 @@ scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
 margin_top = 497.0
 margin_right = 860.0
 margin_bottom = 623.0
+focus_neighbour_left = NodePath("../QuitToMainMenu")
+focus_neighbour_top = NodePath("../QuitToMainMenu")
+focus_neighbour_right = NodePath("../ResumeButton")
+focus_neighbour_bottom = NodePath("../ResumeButton")
 
 [node name="MenusToDisplay" type="Control" parent="."]
 margin_right = 40.0

@@ -34,12 +34,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Others/general_helpers.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "GetReadyMenu",
 "language": "GDScript",
 "path": "res://Scripts/get_ready_menu.gd"
 }, {
-"base": "Reference",
+"base": "AudioStreamPlayer",
 "class": "InGameMusicPlayer",
 "language": "GDScript",
 "path": "res://Scripts/in_game_music_player.gd"
@@ -74,12 +74,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/player_controller.gd"
 }, {
-"base": "Reference",
+"base": "RigidBody2D",
 "class": "Projectile",
 "language": "GDScript",
 "path": "res://Scripts/projectile.gd"
 }, {
-"base": "Reference",
+"base": "Area2D",
 "class": "ProjectileDetector",
 "language": "GDScript",
 "path": "res://Scripts/projectile_detector.gd"
@@ -89,7 +89,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/projectiles_manager.gd"
 }, {
-"base": "Reference",
+"base": "Path2D",
 "class": "ProjectileSpawnLocations",
 "language": "GDScript",
 "path": "res://Scripts/projectile_spawn_locations.gd"
@@ -119,7 +119,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/spawning_pace_timer.gd"
 }, {
-"base": "Reference",
+"base": "Sprite",
 "class": "Turbine_Rotator",
 "language": "GDScript",
 "path": "res://Scripts/turbine_rotator.gd"
@@ -220,6 +220,10 @@ display_pause_menu={
 2d_physics/layer_1="environment"
 2d_physics/layer_2="projectiles"
 2d_physics/layer_3="player"
+
+[locale]
+
+translations=PoolStringArray( "res://Translations/fr/menus_fr.po" )
 
 [physics]
 

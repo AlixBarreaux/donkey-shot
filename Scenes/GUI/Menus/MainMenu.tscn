@@ -17,6 +17,7 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_use_anchors_": false
 }
+first_button_to_focus_node_path = NodePath("VBoxContainer/PlayButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -63,6 +64,7 @@ focus_neighbour_right = NodePath("../CreditsButton")
 focus_neighbour_bottom = NodePath("../CreditsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
+disabled = true
 text = "options"
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
@@ -75,6 +77,7 @@ focus_neighbour_right = NodePath("../QuitToDesktopButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
+disabled = true
 text = "credits"
 
 [node name="QuitToDesktopButton" parent="VBoxContainer" instance=ExtResource( 1 )]

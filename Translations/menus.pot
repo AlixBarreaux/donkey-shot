@@ -10,8 +10,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "credits"
+msgstr ""
 
-# Keywords for Strings
+msgid "game over"
+msgstr ""
+
+msgid "Get ready!"
+msgstr ""
+
+msgid "lives"
+msgstr ""
+
+msgid "options"
+msgstr ""
+
+msgid "pause"
+msgstr ""
+
+msgid "play"
+msgstr ""
+
+msgid "play again"
+msgstr ""
+
+msgid "quit to desktop"
+msgstr ""
+
+msgid "quit to main menu"
+msgstr ""
+
+msgid "resume"
+msgstr ""
 
 msgid "score"
 msgstr ""

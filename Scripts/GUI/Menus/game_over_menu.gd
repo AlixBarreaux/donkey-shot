@@ -5,6 +5,14 @@ extends Control
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
+# Node Paths
+export (NodePath) var first_button_to_focus_node_path = null
+
+
+# Node References
+onready var first_button_to_focus: Button = get_node(first_button_to_focus_node_path)
+
+
 # Signals to connect to
 onready var signals_connections_list: PoolIntArray = [
 	Events.connect("game_over", self, "show")
@@ -16,9 +24,19 @@ onready var signals_connections_list: PoolIntArray = [
 
 func _ready() -> void:
 	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
-
+	self._initialize_asserts()
+	self._initialize()
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
+
+func _initialize_asserts() -> void:
+	assert(self.first_button_to_focus_node_path != null)
+	assert(self.first_button_to_focus is Button)
+	
+	
+func _initialize() -> void:
+	self.first_button_to_focus.grab_focus()
 
 
 func _on_PlayAgainButton_pressed() -> void:
