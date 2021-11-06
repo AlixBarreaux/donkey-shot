@@ -31,9 +31,12 @@ projectile_scene = ExtResource( 5 )
 position = Vector2( 32, 0 )
 
 [node name="ProjectileSpawnTimer" type="Timer" parent="MobSpawnLocations"]
+wait_time = 2.07
 script = ExtResource( 4 )
+time_decrease = 0.009
 
 [node name="SpawningPaceTimer" type="Timer" parent="MobSpawnLocations"]
+wait_time = 0.8
 script = ExtResource( 7 )
 
 [node name="Projectiles" type="Node2D" parent="."]
