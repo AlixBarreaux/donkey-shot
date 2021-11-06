@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Control",
+"class": "CreditsMenu",
+"language": "GDScript",
+"path": "res://credits_menu.gd"
+}, {
+"base": "Control",
 "class": "GameOverMenu",
 "language": "GDScript",
 "path": "res://Scripts/GUI/game_over_menu.gd"
@@ -29,12 +34,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Others/general_helpers.gd"
 }, {
-"base": "Control",
+"base": "Reference",
 "class": "GetReadyMenu",
 "language": "GDScript",
 "path": "res://Scripts/get_ready_menu.gd"
 }, {
-"base": "AudioStreamPlayer",
+"base": "Reference",
 "class": "InGameMusicPlayer",
 "language": "GDScript",
 "path": "res://Scripts/in_game_music_player.gd"
@@ -43,6 +48,16 @@ _global_script_classes=[ {
 "class": "LivesGUI",
 "language": "GDScript",
 "path": "res://Scripts/GUI/lives_gui.gd"
+}, {
+"base": "Control",
+"class": "MainMenu",
+"language": "GDScript",
+"path": "res://main_menu.gd"
+}, {
+"base": "Control",
+"class": "OptionsMenu",
+"language": "GDScript",
+"path": "res://options_menu.gd"
 }, {
 "base": "Control",
 "class": "PauseMenu",
@@ -59,27 +74,27 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/player_controller.gd"
 }, {
-"base": "RigidBody2D",
+"base": "Reference",
 "class": "Projectile",
 "language": "GDScript",
 "path": "res://Scripts/projectile.gd"
 }, {
-"base": "Area2D",
+"base": "Reference",
 "class": "ProjectileDetector",
 "language": "GDScript",
 "path": "res://Scripts/projectile_detector.gd"
 }, {
-"base": "Node2D",
+"base": "Reference",
 "class": "ProjectileManager",
 "language": "GDScript",
 "path": "res://Scripts/projectiles_manager.gd"
 }, {
-"base": "Path2D",
+"base": "Reference",
 "class": "ProjectileSpawnLocations",
 "language": "GDScript",
 "path": "res://Scripts/projectile_spawn_locations.gd"
 }, {
-"base": "Timer",
+"base": "Reference",
 "class": "ProjectileSpawnTimer",
 "language": "GDScript",
 "path": "res://Scripts/projectile_spawn_timer.gd"
@@ -99,17 +114,18 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/score_gui.gd"
 }, {
-"base": "Timer",
+"base": "Reference",
 "class": "SpawningPaceTimer",
 "language": "GDScript",
 "path": "res://Scripts/spawning_pace_timer.gd"
 }, {
-"base": "Sprite",
+"base": "Reference",
 "class": "Turbine_Rotator",
 "language": "GDScript",
 "path": "res://Scripts/turbine_rotator.gd"
 } ]
 _global_script_class_icons={
+"CreditsMenu": "",
 "GameOverMenu": "",
 "GameTitleLabel": "",
 "GameVersionLabel": "",
@@ -117,6 +133,8 @@ _global_script_class_icons={
 "GetReadyMenu": "",
 "InGameMusicPlayer": "",
 "LivesGUI": "",
+"MainMenu": "",
+"OptionsMenu": "",
 "PauseMenu": "",
 "Player": "",
 "PlayerController": "",
@@ -141,7 +159,7 @@ config/version=1
 
 [audio]
 
-default_bus_layout="res://Resources/default_bus_layout.tres"
+default_bus_layout="res://Resources/Audio_Bus_Layouts/default_bus_layout.tres"
 
 [autoload]
 
@@ -212,4 +230,4 @@ common/enable_pause_aware_picking=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://Resources/default_env.tres"
+environment/default_environment="res://Resources/Environments/default_env.tres"
