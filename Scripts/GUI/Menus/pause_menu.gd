@@ -43,14 +43,17 @@ func _unhandled_key_input(_event: InputEventKey) -> void:
 func _initialize_asserts() -> void:
 	assert(self.first_button_to_focus_node_path != null)
 	assert(self.first_button_to_focus is Button)
-	
-	
+
+
 func _initialize() -> void:
 	self.first_button_to_focus.grab_focus()
 
 
 func _on_PauseMenu_visibility_changed() -> void:
-		get_tree().set_pause(self.visible)
+	get_tree().set_pause(self.visible)
+	
+	if self.visible:
+		self.first_button_to_focus.grab_focus()
 
 
 func _on_ResumeButton_pressed() -> void:
