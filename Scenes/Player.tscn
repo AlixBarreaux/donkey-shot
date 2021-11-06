@@ -3,13 +3,13 @@
 [ext_resource path="res://Miscellaneous/icon.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
 [ext_resource path="res://player_controller.gd" type="Script" id=3]
-[ext_resource path="res://projectile_detector.gd" type="Script" id=4]
+[ext_resource path="res://ProjectileDetector.tscn" type="PackedScene" id=4]
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource( 2 )
-current_speed = 1000
+current_speed = 1500
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -22,18 +22,4 @@ position = Vector2( -262.516, 24.1631 )
 scale = Vector2( 19.0255, 19.0255 )
 polygon = PoolVector2Array( 10, -1.5, 6, -8, 8, -8, 10, -4, 18.2923, -4.06042, 20.6573, -8.63281, 23.6005, -8.68536, 19.0807, -1.90564 )
 
-[node name="ProjectileDetector" type="Area2D" parent="."]
-position = Vector2( 119.518, -214.497 )
-collision_layer = 0
-collision_mask = 2
-script = ExtResource( 4 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ProjectileDetector"]
-position = Vector2( -379.658, 190.387 )
-scale = Vector2( 19.0255, 19.0255 )
-polygon = PoolVector2Array( 10, -1.5, 7.92355, -5.50085, 20.801, -6.02647, 18.2255, -1.61134 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[connection signal="body_entered" from="ProjectileDetector" to="ProjectileDetector" method="_on_ProjectileDetector_body_entered"]
+[node name="ProjectileDetector" parent="." instance=ExtResource( 4 )]

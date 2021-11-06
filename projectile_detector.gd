@@ -7,6 +7,9 @@ extends Area2D
 
 export var projectile_score_value: int = 1
 
+# Node References
+onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 

@@ -26,7 +26,7 @@ func _ready() -> void:
 
 
 func _initialize() -> void:
-	update_lives(Global.get_current_score())
+	update_lives(Global.get_current_lives())
 
 
 func update_lives(value: int) -> void:

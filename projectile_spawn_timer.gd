@@ -39,4 +39,4 @@ func _on_SpawningPaceTimer_timeout() -> void:
 		return
 	
 	self.set_wait_time(self.get_wait_time() - time_decrease)
-	print(get_wait_time())
+#	print(get_wait_time())

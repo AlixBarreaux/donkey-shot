@@ -4,8 +4,9 @@ extends Button
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+export var scene_to_load_path: String = ""
 
-export var scene_to_load: PackedScene = null
+onready var scene_to_load = load(self.scene_to_load_path)
 
 
 # ---------------------------------- RUN CODE ----------------------------------
@@ -19,8 +20,8 @@ func _ready() -> void:
 
 
 func _initialize_asserts() -> void:
-	assert(self.scene_to_load != null)
+	assert(self.scene_to_load_path != "")
 
 
 func _on_SceneLoaderButton_pressed() -> void:
-	get_tree().change_scene_to(self.scene_to_load)
+	get_tree().change_scene(self.scene_to_load_path)

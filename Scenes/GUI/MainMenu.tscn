@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/GUI/GameTitleLabel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GUI/GameVersionLabel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GUI/QuitToDesktopButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GUI/SceneLoaderButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Game.tscn" type="PackedScene" id=5]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -40,7 +39,8 @@ __meta__ = {
 }
 
 [node name="PlayButton" parent="VBoxContainer" instance=ExtResource( 4 )]
-scene_to_load = ExtResource( 5 )
+text = "play"
+scene_to_load_path = "res://Game.tscn"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 margin_top = 164.0
@@ -62,3 +62,6 @@ margin_right = -671.0
 margin_bottom = -47.0
 align = 1
 valign = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = "Music"

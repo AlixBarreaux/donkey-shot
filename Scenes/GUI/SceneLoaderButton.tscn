@@ -7,7 +7,6 @@ margin_right = 453.0
 margin_bottom = 124.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "play"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

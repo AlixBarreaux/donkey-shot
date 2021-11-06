@@ -1,24 +1,21 @@
-class_name GetReadyMenu
+class_name GameOverMenu
 extends Control
-
-
-# Displays a message and starts the game by sending the signal Game Started.
 
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
+	Events.connect("game_over", self, "show")
+	]
 
 
 # ---------------------------------- RUN CODE ----------------------------------
 
 
 func _ready() -> void:
-	self.show()
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
-
-
-func _on_DisappearTimer_timeout() -> void:
-	self.hide()
-	Events.emit_signal("game_started")
