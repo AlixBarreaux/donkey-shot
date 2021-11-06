@@ -5,6 +5,11 @@ extends Control
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
+	Events.connect("game_over", self, "on_game_over")
+	]
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -35,3 +40,8 @@ func _on_ResumeButton_pressed() -> void:
 # Make sure the game isn't paused when on the MainMenu
 func _on_QuitToMainMenu_pressed() -> void:
 	get_tree().set_pause(false)
+
+
+# Prevent making self appear when the game is over
+func on_game_over() -> void:
+	self.set_process_unhandled_key_input(false)
