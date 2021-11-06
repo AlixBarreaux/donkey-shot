@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/GUI/QuitToDesktopButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/GUI/Menus/pause_menu.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/GUI/SceneLoaderButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=4]
 [ext_resource path="res://Resources/Themes/menu_default_theme.tres" type="Theme" id=5]
+[ext_resource path="res://Scenes/GUI/Menus/OptionsMenu.tscn" type="PackedScene" id=6]
 
 [node name="PauseMenu" type="Control"]
 pause_mode = 2
@@ -98,8 +99,11 @@ focus_neighbour_right = NodePath("../ResumeButton")
 focus_neighbour_bottom = NodePath("../ResumeButton")
 
 [node name="MenusToDisplay" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="OptionsMenu" parent="MenusToDisplay" instance=ExtResource( 6 )]
+visible = false
 
 [connection signal="visibility_changed" from="." to="." method="_on_PauseMenu_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
