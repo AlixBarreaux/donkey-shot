@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/GUI/game_over_menu.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/GUI/Menus/game_over_menu.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GUI/SceneLoaderButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Resources/Themes/menu_default_theme.tres" type="Theme" id=4]
 
 [node name="GameOverMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,11 +40,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="ColorRect/VBoxContainer"]
 margin_right = 740.0
 margin_bottom = 119.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource( 3 )
 text = "game over"
 align = 1
 valign = 1
@@ -69,4 +73,4 @@ focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 text = "quit to main menu"
-scene_to_load_path = "res://Scenes/GUI/MainMenu.tscn"
+scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
