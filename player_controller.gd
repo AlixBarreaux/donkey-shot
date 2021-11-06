@@ -6,7 +6,7 @@ extends Node
 
 
 var move_input: Vector2 = Vector2(0.0, 0.0)
-var rotation_input: float = 0.0
+#var rotation_input: float = 0.0
 
 
 
@@ -36,7 +36,7 @@ func _initialize_signals() -> void:
 
 func _physics_process(_delta: float) -> void:
 	self.process_movement_inputs()
-	self.process_rotation_inputs()
+#	self.process_rotation_inputs()
 
 
 func process_movement_inputs() -> void:
@@ -51,19 +51,19 @@ func process_movement_inputs() -> void:
 
 
 
-func process_rotation_inputs() -> void:
-	if Input.get_action_strength("rotate_left"):
-		rotation_input = -1.0
-		self.emit_signal("rotation_input_sent", rotation_input)
-	
-	if Input.is_action_just_released("rotate_left"):
-		rotation_input = 0.0
-	
-	elif Input.get_action_strength("rotate_right"):
-		rotation_input = 1.0
-		self.emit_signal("rotation_input_sent", rotation_input)
-	
-	if Input.is_action_just_released("rotate_right"):
-		rotation_input = 0.0
+#func process_rotation_inputs() -> void:
+#	if Input.get_action_strength("rotate_left"):
+#		rotation_input = -1.0
+#		self.emit_signal("rotation_input_sent", rotation_input)
+#
+#	if Input.is_action_just_released("rotate_left"):
+#		rotation_input = 0.0
+#
+#	elif Input.get_action_strength("rotate_right"):
+#		rotation_input = 1.0
+#		self.emit_signal("rotation_input_sent", rotation_input)
+#
+#	if Input.is_action_just_released("rotate_right"):
+#		rotation_input = 0.0
 
-	print(rotation_input)
+#	print(rotation_input)

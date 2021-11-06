@@ -7,6 +7,8 @@ extends Node
 
 var score: int = 0 setget set_score, get_score
 
+signal score_set
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -25,6 +27,7 @@ func increase_score(value: int) -> void:
 
 func set_score(value: int) -> void:
 	score = value
+	emit_signal("score_set", value)
 
 
 func get_score() -> int:

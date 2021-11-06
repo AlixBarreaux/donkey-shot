@@ -44,10 +44,30 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://projectile_detector.gd"
 }, {
+"base": "Path2D",
+"class": "ProjectileSpawnLocations",
+"language": "GDScript",
+"path": "res://projectile_spawn_locations.gd"
+}, {
+"base": "Timer",
+"class": "ProjectileSpawnTimer",
+"language": "GDScript",
+"path": "res://projectile_spawn_timer.gd"
+}, {
 "base": "Button",
 "class": "QuitToDesktopButton",
 "language": "GDScript",
 "path": "res://Scripts/GUI/quit_to_desktop_button.gd"
+}, {
+"base": "HBoxContainer",
+"class": "ScoreGUI",
+"language": "GDScript",
+"path": "res://Scripts/GUI/score_gui.gd"
+}, {
+"base": "Timer",
+"class": "SpawningPaceTimer",
+"language": "GDScript",
+"path": "res://spawning_pace_timer.gd"
 }, {
 "base": "Sprite",
 "class": "Turbine_Rotator",
@@ -62,14 +82,18 @@ _global_script_class_icons={
 "PlayerController": "",
 "Projectile": "",
 "ProjectileDetector": "",
+"ProjectileSpawnLocations": "",
+"ProjectileSpawnTimer": "",
 "QuitToDesktopButton": "",
+"ScoreGUI": "",
+"SpawningPaceTimer": "",
 "Turbine_Rotator": ""
 }
 
 [application]
 
 config/name="Donkey Shot"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Game.tscn"
 config/icon="res://Miscellaneous/icon.png"
 config/version=1
 

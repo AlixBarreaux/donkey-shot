@@ -5,23 +5,17 @@ extends RigidBody2D
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
-#export var id: int = -1
+export var score_value: int = 10
 
 
 # ---------------------------------- RUN CODE ----------------------------------
 
 
-#func _ready() -> void:
-#	self._initialize_asserts()
-
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 
-#func _initialize_asserts() -> void:
-#	assert(id > 0)
-
-
 func die() -> void:
 #	modulate.a = 0.3
+	Global.increase_score(self.score_value)
 	self.queue_free()
