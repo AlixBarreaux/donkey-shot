@@ -18,6 +18,5 @@ onready var signals_connections_list: PoolIntArray = [
 
 
 func on_game_over() -> void:
-	print(self.name + ": Game over!")
 	for projectile in self.get_children():
 		projectile.queue_free()

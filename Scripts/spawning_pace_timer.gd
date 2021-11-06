@@ -25,7 +25,6 @@ func _ready() -> void:
 
 
 func on_game_started() -> void:
-	print(self.name + ": Started")
 	self.start()
 
 
@@ -37,4 +36,3 @@ func on_game_over() -> void:
 func _on_ProjectileSpawnTimer_max_spawn_pace_reached() -> void:
 	self.stop()
 	self.disconnect("timeout", self.get_parent().get_node("ProjectileSpawnTimer"), "_on_SpawningPaceTimer_timeout")
-	print("Stopped!")

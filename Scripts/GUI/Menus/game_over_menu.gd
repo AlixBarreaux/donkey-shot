@@ -19,3 +19,7 @@ func _ready() -> void:
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
+
+func _on_PlayAgainButton_pressed() -> void:
+	Events.emit_signal("game_restarted")

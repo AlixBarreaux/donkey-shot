@@ -9,7 +9,6 @@
 [ext_resource path="res://Scripts/spawning_pace_timer.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/projectiles_manager.gd" type="Script" id=8]
 
-
 [sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 1904, 0 )

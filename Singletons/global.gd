@@ -5,10 +5,16 @@ extends Node
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
-var initial_lives: int = 3
+var initial_lives: int = 3 setget , get_initial_lives
 
 var current_score: int = 0 setget set_current_score, get_current_score
 onready var current_lives: int = initial_lives setget set_current_lives, get_current_lives
+
+
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
+	Events.connect("game_restarted", self, "on_game_restarted")
+	]
 
 signal current_score_set
 signal current_lives_set
@@ -51,7 +57,6 @@ func decrease_current_lives(value: int) -> void:
 		set_current_lives(0)
 		Events.emit_signal("game_over")
 	else:
-		print("OOF! " + str(current_lives))
 		set_current_lives(current_lives)
 
 
@@ -62,3 +67,12 @@ func set_current_lives(value: int) -> void:
 
 func get_current_lives() -> int:
 	return current_lives
+
+
+func get_initial_lives() -> int:
+	return initial_lives
+
+
+func on_game_restarted() -> void:
+	set_current_score(0)
+	set_current_lives(get_initial_lives())

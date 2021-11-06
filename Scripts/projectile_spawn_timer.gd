@@ -30,12 +30,10 @@ func _ready() -> void:
 
 
 func on_game_started() -> void:
-	print(self.name + ": Started")
 	self.start()
 
 
 func on_game_over() -> void:
-	print(self.name + ": Game over!")
 	self.stop()
 
 
@@ -45,4 +43,3 @@ func _on_SpawningPaceTimer_timeout() -> void:
 		return
 	
 	self.set_wait_time(self.get_wait_time() - time_decrease)
-#	print(get_wait_time())

@@ -74,3 +74,5 @@ focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
