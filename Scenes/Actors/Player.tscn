@@ -115,7 +115,6 @@ polygon = PoolVector2Array( 9.54226, -1.70492, 8.07337, -4.43956, 19.9651, -4.84
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 process_mode = 0
 parameters/playback = SubResource( 11 )
 parameters/Move/blend_position = Vector2( 0, 0 )

@@ -27,6 +27,7 @@ onready var signals_connections_list: PoolIntArray = [
 
 func _ready() -> void:
 	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
+	self.animation_tree.set_active(true)
 
 
 # ------------------------------ DECLARE FUNCTIONS ----------------------
