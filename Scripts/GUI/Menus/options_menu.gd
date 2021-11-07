@@ -37,6 +37,3 @@ func _on_visibility_changed() -> void:
 
 func _on_BackButton_pressed() -> void:
 	self.hide()
-
-
-

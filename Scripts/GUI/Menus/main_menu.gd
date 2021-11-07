@@ -54,3 +54,23 @@ func _on_OptionsButton_pressed() -> void:
 	options_menu.set_mouse_filter(MOUSE_FILTER_STOP)
 	
 	options_menu.show()
+
+
+
+
+
+onready var credits_button: Button = $VBoxContainer/CreditsButton
+onready var credits_menu: Control = $MenusToDisplay/CreditsMenu
+
+func _on_CreditsMenu_visibility_changed() -> void:
+	self.menus_to_display.set_mouse_filter(MOUSE_FILTER_IGNORE)
+	self.credits_menu.set_mouse_filter(MOUSE_FILTER_IGNORE)
+
+	self.credits_button.grab_focus()
+
+
+func _on_CreditsButton_pressed() -> void:
+	menus_to_display.set_mouse_filter(MOUSE_FILTER_STOP)
+	credits_menu.set_mouse_filter(MOUSE_FILTER_STOP)
+	
+	credits_menu.show()

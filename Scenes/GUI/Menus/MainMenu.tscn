@@ -80,7 +80,6 @@ focus_neighbour_right = NodePath("../QuitToDesktopButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 text = "credits"
 
 [node name="QuitToDesktopButton" parent="VBoxContainer" instance=ExtResource( 1 )]
@@ -124,4 +123,6 @@ autoplay = true
 bus = "Music"
 
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="visibility_changed" from="MenusToDisplay/OptionsMenu" to="." method="_on_OptionsMenu_visibility_changed"]
+[connection signal="visibility_changed" from="MenusToDisplay/CreditsMenu" to="." method="_on_CreditsMenu_visibility_changed"]

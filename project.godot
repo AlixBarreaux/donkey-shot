@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/Menus/credits_menu.gd"
 }, {
-"base": "Reference",
+"base": "HBoxContainer",
 "class": "FullScreenController",
 "language": "GDScript",
 "path": "res://Scripts/GUI/full_screen_controller.gd"
@@ -129,7 +129,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/turbine_rotator.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "VolumeController",
 "language": "GDScript",
 "path": "res://Scripts/GUI/volume_controller_gui.gd"

@@ -12,6 +12,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+first_button_to_focus_node_path = NodePath("BackButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -44,6 +45,10 @@ margin_top = -319.0
 margin_right = 602.0
 margin_bottom = 295.0
 rect_clip_content = false
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath("../BackButton")
+focus_neighbour_right = NodePath("../BackButton")
+focus_neighbour_bottom = NodePath("../BackButton")
 mouse_filter = 1
 follow_focus = true
 scroll_horizontal_enabled = false
@@ -158,8 +163,15 @@ margin_left = -194.0
 margin_top = -192.734
 margin_right = 194.0
 margin_bottom = -72.7344
+focus_neighbour_left = NodePath("../ScrollContainer")
+focus_neighbour_top = NodePath("../ScrollContainer")
+focus_neighbour_right = NodePath("../ScrollContainer")
+focus_neighbour_bottom = NodePath("../ScrollContainer")
 text = "back"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
