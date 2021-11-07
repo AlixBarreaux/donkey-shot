@@ -72,4 +72,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

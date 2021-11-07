@@ -18,8 +18,6 @@ onready var first_button_to_focus: Button = get_node(first_button_to_focus_node_
 
 func _ready() -> void:
 	self._initialize_asserts()
-	self._initialize()
-	
 	self.hide()
 
 
@@ -31,9 +29,15 @@ func _initialize_asserts() -> void:
 	assert(self.first_button_to_focus is Button)
 
 
-func _initialize() -> void:
-	self.first_button_to_focus.grab_focus()
+func _on_visibility_changed() -> void:
+	if self.visible:
+		self.first_button_to_focus.grab_focus()
+	else:
+		self.first_button_to_focus.release_focus()
 
 
 func _on_BackButton_pressed() -> void:
 	self.hide()
+
+
+
