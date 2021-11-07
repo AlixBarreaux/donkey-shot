@@ -66,3 +66,6 @@ msgstr ""
 
 msgid "what's going on out there?"
 msgstr ""
+
+msgid "It was bound to happen! By dint of deteriorating all the mills from the region Donkey Shot and his faithful companion Sanchin Panzé were sentenced to one year of community service. They will have to bring the crops in the area to the village's mill.\n\nBut Donkey Shot prefers to recite verses rather than belittling himself in order to nourrish this giant And it's for Sanchin Panzé to do the hard labor.\n\nWith all these grains he carries on his own, would he at least get past the arcade of the mill's door?"
+msgstr ""
