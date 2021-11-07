@@ -32,9 +32,16 @@ func _ready() -> void:
 # ------------------------------ DECLARE FUNCTIONS ----------------------
 
 
+onready var animation_tree: AnimationTree = $AnimationTree
+onready var animation_tree_node_sm_playback = animation_tree.get("parameters/playback")
+
 func move(movement_input: Vector2) -> void:
 	self.velocity = movement_input * self.current_speed
 	self.velocity = self.move_and_slide(self.velocity, self.up_direction)
+	
+	# Set the animation Tree to play Animation Move with the velocity
+	self.animation_tree.set("parameters/Move/blend_position", self.velocity)
+	self.animation_tree_node_sm_playback.travel("Move")
 
 
 func on_game_over() -> void:
