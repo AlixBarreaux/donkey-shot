@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/projectile.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/seed.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 23.5213
+radius = 27.099
 
 [node name="Projectile" type="RigidBody2D"]
 collision_layer = 2
@@ -14,11 +13,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+textures_list = [ "res://Resources/Atlas_Textures/grain_1_atlastexture.tres", "res://Resources/Atlas_Textures/grain_2_atlastexture.tres", "res://Resources/Atlas_Textures/grain_3_atlastexture.tres", "res://Resources/Atlas_Textures/grain_4_atlastexture.tres", "res://Resources/Atlas_Textures/grain_5_atlastexture.tres", "res://Resources/Atlas_Textures/grain_6_atlastexture.tres" ]
 
 [node name="Sprite" type="Sprite" parent="."]
-self_modulate = Color( 1, 0.678431, 0, 1 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
