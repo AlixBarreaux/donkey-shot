@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GUI/ScoreGUI.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/GUI/Menus/PauseMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/Menus/GetReadyMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/GUI/Menus/GameOverMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Sprites/background_in_game.png" type="Texture" id=8]
 
 [node name="Game" type="Node"]
 
@@ -21,11 +22,19 @@ __meta__ = {
 }
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="InGameGUICanvasLayer/InGameGUI"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+self_modulate = Color( 1, 1, 1, 0.72549 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect" type="ColorRect" parent="InGameGUICanvasLayer/InGameGUI"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.0313726, 0, 0.152941, 1 )
