@@ -28,7 +28,7 @@ script = ExtResource( 6 )
 projectile_scene = ExtResource( 5 )
 
 [node name="SpawnLocation" type="PathFollow2D" parent="MobSpawnLocations"]
-position = Vector2( 32, 0 )
+position = Vector2( 128, 0 )
 
 [node name="ProjectileSpawnTimer" type="Timer" parent="MobSpawnLocations"]
 wait_time = 2.07
