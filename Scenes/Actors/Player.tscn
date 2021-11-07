@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/ProjectileDetector.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=2]
@@ -6,11 +6,25 @@
 [ext_resource path="res://Assets/Sprites/sanchin_panze_basket.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/sanchin_panze.png" type="Texture" id=5]
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=1]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Character:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
 resource_name = "Move Down"
 
-[sub_resource type="Animation" id=1]
-resource_name = "Move Left"
+[sub_resource type="Animation" id=3]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Character:flip_h")
@@ -25,8 +39,7 @@ tracks/0/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Move Right"
+[sub_resource type="Animation" id=4]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Character:flip_h")
@@ -41,41 +54,49 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=5]
 resource_name = "Move Up"
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "Move Left"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Move Right"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=8]
 animation = "Move Down"
 
-[sub_resource type="AnimationNodeAnimation" id=17]
+[sub_resource type="AnimationNodeAnimation" id=9]
 animation = "Move Up"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=9]
-blend_point_0/node = SubResource( 12 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=10]
+blend_point_0/node = SubResource( 6 )
 blend_point_0/pos = Vector2( -1.1, 0 )
-blend_point_1/node = SubResource( 13 )
+blend_point_1/node = SubResource( 7 )
 blend_point_1/pos = Vector2( 1.1, 0 )
-blend_point_2/node = SubResource( 16 )
+blend_point_2/node = SubResource( 8 )
 blend_point_2/pos = Vector2( 0, 1.1 )
-blend_point_3/node = SubResource( 17 )
+blend_point_3/node = SubResource( 9 )
 blend_point_3/pos = Vector2( 0, -1.1 )
 min_space = Vector2( -10, -1 )
 max_space = Vector2( 10, 1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachine" id=10]
-states/Move/node = SubResource( 9 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachine" id=11]
+states/Idle/node = SubResource( 13 )
+states/Idle/position = Vector2( 496, 115 )
+states/Move/node = SubResource( 10 )
 states/Move/position = Vector2( 658, 115 )
-start_node = "Move"
+transitions = [ "Idle", "Move", SubResource( 14 ) ]
+start_node = "Idle"
 end_node = "Move"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 4
@@ -107,16 +128,17 @@ polygon = PoolVector2Array( 10.1821, -1.52288, 8.07289, -3.44031, 5.90472, -7.09
 polygon = PoolVector2Array( 9.54226, -1.70492, 8.07337, -4.43956, 19.9651, -4.84584, 19.6526, -3.86138, 18.1993, -1.7518, 17.5118, -1.01735, 16.4961, -0.736077, 11.2768, -0.689198, 10.1986, -1.00173 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/Move Down" = SubResource( 14 )
-"anims/Move Left" = SubResource( 1 )
-"anims/Move Right" = SubResource( 2 )
-"anims/Move Up" = SubResource( 15 )
+anims/Idle = SubResource( 1 )
+"anims/Move Down" = SubResource( 2 )
+"anims/Move Left" = SubResource( 3 )
+"anims/Move Right" = SubResource( 4 )
+"anims/Move Up" = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 10 )
+tree_root = SubResource( 11 )
 anim_player = NodePath("../AnimationPlayer")
 process_mode = 0
-parameters/playback = SubResource( 11 )
+parameters/playback = SubResource( 12 )
 parameters/Move/blend_position = Vector2( 0, 0 )
 
 [editable path="ProjectileDetector"]

@@ -40,9 +40,12 @@ func move(movement_input: Vector2) -> void:
 	self.velocity = movement_input * self.current_speed
 	self.velocity = self.move_and_slide(self.velocity, self.up_direction)
 	
-	# Set the animation Tree to play Animation Move with the velocity
-	self.animation_tree.set("parameters/Move/blend_position", self.velocity)
-	self.animation_tree_node_sm_playback.travel("Move")
+	if not self.velocity == Vector2(0.0, 0.0):
+		# Set the animation Tree to play Animation Move with the velocity
+		self.animation_tree.set("parameters/Move/blend_position", self.velocity)
+		self.animation_tree_node_sm_playback.travel("Move")
+	else:
+		self.animation_tree_node_sm_playback.travel("Idle")
 
 
 func on_game_over() -> void:
