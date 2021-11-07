@@ -42,9 +42,9 @@ wait_time = 0.8
 script = ExtResource( 7 )
 
 [node name="Decor" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
 
 [node name="Mill" type="Node2D" parent="Decor"]
-modulate = Color( 1, 1, 1, 0.784314 )
 position = Vector2( 269.391, 987.766 )
 
 [node name="Body" type="Sprite" parent="Decor/Mill"]
