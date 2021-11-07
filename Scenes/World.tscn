@@ -40,9 +40,6 @@ time_decrease = 0.009
 wait_time = 0.8
 script = ExtResource( 7 )
 
-[node name="Projectiles" type="Node2D" parent="."]
-script = ExtResource( 8 )
-
 [node name="Mill" type="Node2D" parent="."]
 modulate = Color( 1, 1, 1, 0.784314 )
 position = Vector2( 269.391, 987.766 )
@@ -57,6 +54,9 @@ position = Vector2( -74.7269, -317.414 )
 texture = ExtResource( 9 )
 script = ExtResource( 3 )
 rotation_speed = 0.02
+
+[node name="Projectiles" type="Node2D" parent="."]
+script = ExtResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 868.001, 993.357 )
