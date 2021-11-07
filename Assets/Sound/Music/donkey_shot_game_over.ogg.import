@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/donkey_shot_game_over.ogg-2f4b4ebbb70d264fd83331194d7d1a6e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/donkey_shot_game_over.ogg"
+dest_files=[ "res://.import/donkey_shot_game_over.ogg-2f4b4ebbb70d264fd83331194d7d1a6e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

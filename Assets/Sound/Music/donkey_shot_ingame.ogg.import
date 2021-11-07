@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/donkey_shot_ingame.ogg-31bc785bd499473a00c0c988921900bb.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/donkey_shot_ingame.ogg"
+dest_files=[ "res://.import/donkey_shot_ingame.ogg-31bc785bd499473a00c0c988921900bb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
