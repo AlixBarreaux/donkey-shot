@@ -28,16 +28,6 @@ anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 8 )
-stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="InGameGUICanvasLayer/InGameGUI"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.0313726, 0, 0.152941, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
