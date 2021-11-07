@@ -25,7 +25,7 @@ msgstr ""
 msgid "Get ready!"
 msgstr ""
 
-msgid "lives"
+msgid "lives: "
 msgstr ""
 
 msgid "master"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "resume"
 msgstr ""
 
-msgid "score"
+msgid "score: "
 msgstr ""
 
 msgid "sound effects"
