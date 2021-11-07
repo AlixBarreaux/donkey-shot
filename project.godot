@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/Menus/credits_menu.gd"
 }, {
+"base": "Reference",
+"class": "FullScreenController",
+"language": "GDScript",
+"path": "res://Scripts/GUI/full_screen_controller.gd"
+}, {
 "base": "Control",
 "class": "GameOverMenu",
 "language": "GDScript",
@@ -123,9 +128,15 @@ _global_script_classes=[ {
 "class": "Turbine_Rotator",
 "language": "GDScript",
 "path": "res://Scripts/turbine_rotator.gd"
+}, {
+"base": "Reference",
+"class": "VolumeController",
+"language": "GDScript",
+"path": "res://Scripts/GUI/volume_controller_gui.gd"
 } ]
 _global_script_class_icons={
 "CreditsMenu": "",
+"FullScreenController": "",
 "GameOverMenu": "",
 "GameTitleLabel": "",
 "GameVersionLabel": "",
@@ -147,13 +158,14 @@ _global_script_class_icons={
 "SceneLoaderButton": "",
 "ScoreGUI": "",
 "SpawningPaceTimer": "",
-"Turbine_Rotator": ""
+"Turbine_Rotator": "",
+"VolumeController": ""
 }
 
 [application]
 
 config/name="Donkey Shot"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://Scenes/GUI/Menus/MainMenu.tscn"
 config/icon="res://Miscellaneous/icon.png"
 config/version=1
 

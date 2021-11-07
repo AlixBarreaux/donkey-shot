@@ -16,6 +16,9 @@ msgstr ""
 msgid "credits"
 msgstr ""
 
+msgid "fullscreen"
+msgstr ""
+
 msgid "game over"
 msgstr ""
 
@@ -23,6 +26,12 @@ msgid "Get ready!"
 msgstr ""
 
 msgid "lives"
+msgstr ""
+
+msgid "master"
+msgstr ""
+
+msgid "music"
 msgstr ""
 
 msgid "options"
@@ -47,4 +56,7 @@ msgid "resume"
 msgstr ""
 
 msgid "score"
+msgstr ""
+
+msgid "sound effects"
 msgstr ""

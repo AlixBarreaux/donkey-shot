@@ -54,7 +54,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 1191.0
-margin_bottom = 3196.0
+margin_bottom = 3240.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 150
@@ -67,7 +67,7 @@ __meta__ = {
 margin_right = 1191.0
 margin_bottom = 305.0
 text = "The licenses embedded in this document have been reviewed for the last time at this date:
-31/10/2021 00:03 UTC +2
+07/11/2021 15:14 UTC +2
 
 This whole game and its code are released under a MIT license EXCLUDING the assets  with their own license cited below in this document."
 align = 1
@@ -124,8 +124,9 @@ autowrap = true
 [node name="GameEngineLabel" type="Label" parent="ScrollContainer/VBoxContainer"]
 margin_top = 1703.0
 margin_right = 1191.0
-margin_bottom = 3196.0
+margin_bottom = 3240.0
 text = "Game Engine:
+
 Godot Engine
 
 

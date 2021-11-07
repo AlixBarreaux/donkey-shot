@@ -18,7 +18,6 @@ onready var first_button_to_focus: Button = get_node(first_button_to_focus_node_
 
 func _ready() -> void:
 	self._initialize_asserts()
-	self.hide()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
