@@ -54,10 +54,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/lives_gui.gd"
 }, {
-"base": "Control",
+"base": "Reference",
 "class": "LoreMenu",
 "language": "GDScript",
-"path": "res://lore_menu.gd"
+"path": "res://Scripts/GUI/Menus/lore_menu.gd"
 }, {
 "base": "Control",
 "class": "MainMenu",
