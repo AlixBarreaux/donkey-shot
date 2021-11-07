@@ -12,6 +12,8 @@ export (NodePath) var first_button_to_focus_node_path = null
 # Node References
 onready var first_button_to_focus: Button = get_node(first_button_to_focus_node_path)
 
+onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 
 # Signals to connect to
 onready var signals_connections_list: PoolIntArray = [
@@ -54,6 +56,9 @@ func _on_PauseMenu_visibility_changed() -> void:
 	
 	if self.visible:
 		self.first_button_to_focus.grab_focus()
+		self.audio_stream_player.play()
+	else:
+		self.audio_stream_player.stop()
 
 
 func _on_ResumeButton_pressed() -> void:
