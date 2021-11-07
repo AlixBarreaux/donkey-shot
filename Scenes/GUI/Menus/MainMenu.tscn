@@ -33,6 +33,13 @@ texture = ExtResource( 12 )
 [node name="GameTitleLabel" parent="." instance=ExtResource( 2 )]
 theme = ExtResource( 5 )
 
+[node name="GamePadTextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
