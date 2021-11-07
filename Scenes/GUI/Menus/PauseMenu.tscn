@@ -76,7 +76,6 @@ focus_neighbour_right = NodePath("../QuitToMainMenu")
 focus_neighbour_bottom = NodePath("../QuitToMainMenu")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 text = "options"
 
 [node name="QuitToMainMenu" parent="VBoxContainer" instance=ExtResource( 3 )]
@@ -109,6 +108,8 @@ visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
-[connection signal="visibility_changed" from="." to="." method="_on_PauseMenu_visibility_changed"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitToMainMenu" to="." method="_on_QuitToMainMenu_pressed"]
+[connection signal="visibility_changed" from="MenusToDisplay/OptionsMenu" to="." method="_on_OptionsMenu_visibility_changed"]

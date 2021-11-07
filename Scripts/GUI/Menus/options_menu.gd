@@ -12,3 +12,7 @@ extends Control
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
+
+
+func _on_BackButton_pressed() -> void:
+	self.hide()

@@ -56,3 +56,19 @@ alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BackButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -194.0
+margin_top = -192.734
+margin_right = 194.0
+margin_bottom = -72.7344
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

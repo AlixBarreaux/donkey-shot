@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-11-06 18:15+0100\n"
+"PO-Revision-Date: 2021-11-07 11:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -12,6 +12,9 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+msgid "back"
+msgstr "retour"
+
 msgid "credits"
 msgstr "crédits"
 
@@ -20,6 +23,9 @@ msgstr "partie terminée"
 
 msgid "Get ready!"
 msgstr "Préparez vous!"
+
+msgid "lives"
+msgstr "vies"
 
 msgid "options"
 msgstr "options"
@@ -43,5 +49,5 @@ msgid "resume"
 msgstr "continuer"
 
 # Keywords for Strings
-#~ msgid "score"
-#~ msgstr "score"
+msgid "score"
+msgstr "score"
