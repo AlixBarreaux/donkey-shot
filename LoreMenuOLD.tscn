@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Fonts/Font_Data/menu_default_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/Themes/menu_default_theme.tres" type="Theme" id=2]
+[ext_resource path="res://lore_menu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="LoreMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first_button_to_focus_node_path = NodePath("ColorRect/BackButton")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+margin_top = 58.0
+margin_bottom = 158.0
+theme = SubResource( 2 )
+text = "lore"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -849.0
+margin_top = -311.0
+margin_right = 849.0
+margin_bottom = 312.0
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+margin_top = 93.0
+margin_right = 1698.0
+margin_bottom = 530.0
+text = "
+Cela devait arriver ! À force de détériorer tous les moulins de la région, Donkey Shot et son fidèle compagnon Sanchin Panzé ont écopé d’un an de travaux d’intérêt général. Ils devront apporter les récoltes des champs aux alentours au moulin du village.
+
+Seulement voilà, Donkey Shot préfère réciter des vers plutôt que de se rabaisser à nourrir ce géant. Et c’est à Sanchin Panzé que revient cette lourde tâche. 
+
+Avec tous ces grains à porter à lui seul, arrivera t'il au moins à passer l’arcade de la porte du moulin ?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="BackButton" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -194.0
+margin_top = -192.734
+margin_right = 194.0
+margin_bottom = -72.7344
+focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
+focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
+focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

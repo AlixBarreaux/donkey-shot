@@ -74,3 +74,22 @@ func _on_CreditsButton_pressed() -> void:
 	credits_menu.set_mouse_filter(MOUSE_FILTER_STOP)
 	
 	credits_menu.show()
+
+
+
+
+
+
+onready var lore_button: Button = $VBoxContainer/LoreButton
+onready var lore_menu: Control = $MenusToDisplay/LoreMenu
+func _on_LoreButton_pressed() -> void:
+	menus_to_display.set_mouse_filter(MOUSE_FILTER_STOP)
+	lore_menu.set_mouse_filter(MOUSE_FILTER_STOP)
+	
+	lore_menu.show()
+
+func _on_LoreMenu_visibility_changed() -> void:
+	self.menus_to_display.set_mouse_filter(MOUSE_FILTER_IGNORE)
+	self.lore_menu.set_mouse_filter(MOUSE_FILTER_IGNORE)
+
+	self.lore_button.grab_focus()

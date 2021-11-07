@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/GUI/QuitToDesktopButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GUI/GameTitleLabel.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/GUI/Menus/OptionsMenu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/GUI/Menus/main_menu.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/GUI/Menus/CreditsMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://LoreMenu.tscn" type="PackedScene" id=11]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -39,9 +40,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -493.0
-margin_top = -227.0
+margin_top = -278.0
 margin_right = 492.0
-margin_bottom = 226.0
+margin_bottom = 276.0
 custom_constants/separation = 40
 alignment = 1
 __meta__ = {
@@ -50,20 +51,32 @@ __meta__ = {
 
 [node name="PlayButton" parent="VBoxContainer" instance=ExtResource( 3 )]
 margin_right = 985.0
-margin_bottom = 83.0
+margin_bottom = 78.0
 focus_neighbour_left = NodePath("../QuitToDesktopButton")
 focus_neighbour_top = NodePath("../QuitToDesktopButton")
-focus_neighbour_right = NodePath("../OptionsButton")
-focus_neighbour_bottom = NodePath("../OptionsButton")
+focus_neighbour_right = NodePath("../LoreButton")
+focus_neighbour_bottom = NodePath("../LoreButton")
 text = "play"
 scene_to_load_path = "res://Scenes/Game.tscn"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
-margin_top = 123.0
+[node name="LoreButton" type="Button" parent="VBoxContainer"]
+margin_top = 118.0
 margin_right = 985.0
-margin_bottom = 206.0
+margin_bottom = 197.0
 focus_neighbour_left = NodePath("../PlayButton")
 focus_neighbour_top = NodePath("../PlayButton")
+focus_neighbour_right = NodePath("../OptionsButton")
+focus_neighbour_bottom = NodePath("../OptionsButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "read lore"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+margin_top = 237.0
+margin_right = 985.0
+margin_bottom = 316.0
+focus_neighbour_left = NodePath("../LoreButton")
+focus_neighbour_top = NodePath("../LoreButton")
 focus_neighbour_right = NodePath("../CreditsButton")
 focus_neighbour_bottom = NodePath("../CreditsButton")
 size_flags_horizontal = 3
@@ -71,9 +84,9 @@ size_flags_vertical = 3
 text = "options"
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
-margin_top = 246.0
+margin_top = 356.0
 margin_right = 985.0
-margin_bottom = 329.0
+margin_bottom = 435.0
 focus_neighbour_left = NodePath("../OptionsButton")
 focus_neighbour_top = NodePath("../OptionsButton")
 focus_neighbour_right = NodePath("../QuitToDesktopButton")
@@ -83,8 +96,9 @@ size_flags_vertical = 3
 text = "credits"
 
 [node name="QuitToDesktopButton" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 369.0
+margin_top = 475.0
 margin_right = 985.0
+margin_bottom = 554.0
 focus_neighbour_left = NodePath("../CreditsButton")
 focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_right = NodePath("../PlayButton")
@@ -109,6 +123,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LoreMenu" parent="MenusToDisplay" instance=ExtResource( 11 )]
+visible = false
+
 [node name="OptionsMenu" parent="MenusToDisplay" instance=ExtResource( 8 )]
 visible = false
 mouse_filter = 2
@@ -122,7 +139,9 @@ stream = ExtResource( 7 )
 autoplay = true
 bus = "Music"
 
+[connection signal="pressed" from="VBoxContainer/LoreButton" to="." method="_on_LoreButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="visibility_changed" from="MenusToDisplay/LoreMenu" to="." method="_on_LoreMenu_visibility_changed"]
 [connection signal="visibility_changed" from="MenusToDisplay/OptionsMenu" to="." method="_on_OptionsMenu_visibility_changed"]
 [connection signal="visibility_changed" from="MenusToDisplay/CreditsMenu" to="." method="_on_CreditsMenu_visibility_changed"]
