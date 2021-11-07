@@ -16,7 +16,6 @@ onready var signals_connections_list: PoolIntArray = [
 
 # Signals to send
 signal movement_input_sent
-signal rotation_input_sent
 
 
 # ---------------------------------- RUN CODE ----------------------------------

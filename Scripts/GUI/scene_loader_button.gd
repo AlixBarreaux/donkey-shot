@@ -24,4 +24,4 @@ func _initialize_asserts() -> void:
 
 
 func _on_SceneLoaderButton_pressed() -> void:
-	get_tree().change_scene(self.scene_to_load_path)
+	GeneralHelpers.check_for_generic_error_code(self, get_tree().change_scene(self.scene_to_load_path))
