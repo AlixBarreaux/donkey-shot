@@ -172,7 +172,7 @@ _global_script_class_icons={
 
 config/name="Donkey Shot"
 run/main_scene="res://Scenes/GUI/Menus/MainMenu.tscn"
-config/icon="res://Miscellaneous/icon.png"
+config/icon="res://Miscellaneous/game_icon.png"
 config/version=1
 
 [audio]
