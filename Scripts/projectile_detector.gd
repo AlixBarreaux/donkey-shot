@@ -27,4 +27,4 @@ func _initialize_asserts() -> void:
 
 func _on_ProjectileDetector_body_entered(body: PhysicsBody2D) -> void:
 	body.die()
-	$AudioStreamPlayer.play()
+	self.audio_stream_player.play()
