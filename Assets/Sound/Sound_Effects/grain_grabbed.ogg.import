@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/grain_grabbed.ogg-8a98001c4e2ffb8312f3cac497d3ea81.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Sound_Effects/grain_grabbed.ogg"
+dest_files=[ "res://.import/grain_grabbed.ogg-8a98001c4e2ffb8312f3cac497d3ea81.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
