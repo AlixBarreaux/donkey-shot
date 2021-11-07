@@ -12,6 +12,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+first_button_to_focus_node_path = NodePath("BackButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
