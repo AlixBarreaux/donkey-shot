@@ -88,4 +88,5 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
