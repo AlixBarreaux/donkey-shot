@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/GUI/Menus/game_over_menu.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GUI/SceneLoaderButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=3]
 [ext_resource path="res://Resources/Themes/menu_default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://Assets/Sound/Music/donkey_shot_game_over.ogg" type="AudioStream" id=5]
 
 [node name="GameOverMenu" type="Control"]
 anchor_right = 1.0
@@ -76,6 +77,9 @@ focus_neighbour_right = NodePath("../PlayAgainButton")
 focus_neighbour_bottom = NodePath("../PlayAgainButton")
 text = "quit to main menu"
 scene_to_load_path = "res://Scenes/GUI/Menus/MainMenu.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="visibility_changed" from="." to="." method="_on_GameOverMenu_visibility_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]

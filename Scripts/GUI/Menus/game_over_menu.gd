@@ -15,7 +15,7 @@ onready var first_button_to_focus: Button = get_node(first_button_to_focus_node_
 
 # Signals to connect to
 onready var signals_connections_list: PoolIntArray = [
-	Events.connect("game_over", self, "show")
+	Events.connect("game_over", self, "on_game_over")
 	]
 
 
@@ -48,3 +48,11 @@ func _on_GameOverMenu_visibility_changed() -> void:
 		self.first_button_to_focus.grab_focus()
 	else:
 		self.first_button_to_focus.release_focus()
+
+
+
+onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
+func on_game_over() -> void:
+	self.show()
+	self.audio_stream_player.play()

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/donkey_shot_game_over.ogg-2f4b4ebbb70d264fd83331194d
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
