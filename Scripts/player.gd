@@ -49,4 +49,4 @@ func move(movement_input: Vector2) -> void:
 
 
 func on_game_over() -> void:
-	self.collision_polygon_2d.set_disabled(true)
+	self.collision_polygon_2d.call_deferred("set_disabled", true)
