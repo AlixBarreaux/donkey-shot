@@ -10,7 +10,7 @@
 [ext_resource path="res://Scripts/projectiles_manager.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Sprites/windmill_sail.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Sprites/donkey_donkeyshot_character.png" type="Texture" id=10]
-[ext_resource path="res://Scenes/ProjectileDetectorDying.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/ProjectileDetectors/ProjectileDetectorDying.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
