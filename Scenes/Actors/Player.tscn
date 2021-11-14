@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Scenes/ProjectileDetector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/ProjectileDetectors/ProjectileDetectorScoring.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/player_controller.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Sprites/sanchin_panze_basket.png" type="Texture" id=4]
@@ -120,9 +120,9 @@ position = Vector2( -262.516, 24.1631 )
 scale = Vector2( 19.0255, 19.0255 )
 polygon = PoolVector2Array( 10.1821, -1.52288, 8.07289, -3.44031, 5.90472, -7.09817, 6.58873, -7.38313, 7.43256, -7.41438, 8.042, -7.28937, 9.62027, -4.27346, 10.3391, -3.50776, 11.4329, -3.24211, 16.6678, -3.27336, 17.5898, -3.49213, 18.3555, -4.33596, 19.8244, -6.44554, 20.215, -7.86755, 21.0276, -7.88318, 21.9652, -7.80504, 22.6059, -7.6019, 20.0347, -3.30757, 17.955, -1.58188 )
 
-[node name="ProjectileDetector" parent="." instance=ExtResource( 1 )]
+[node name="ProjectileDetectorScoring" parent="." instance=ExtResource( 1 )]
 
-[node name="CollisionPolygon2D" parent="ProjectileDetector" index="0"]
+[node name="CollisionPolygon2D" parent="ProjectileDetectorScoring" index="0"]
 polygon = PoolVector2Array( 9.54226, -1.70492, 8.07337, -4.43956, 19.9651, -4.84584, 19.6526, -3.86138, 18.1993, -1.7518, 17.5118, -1.01735, 16.4961, -0.736077, 11.2768, -0.689198, 10.1986, -1.00173 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -139,4 +139,4 @@ process_mode = 0
 parameters/playback = SubResource( 14 )
 parameters/Move/blend_position = Vector2( 0, 0 )
 
-[editable path="ProjectileDetector"]
+[editable path="ProjectileDetectorScoring"]

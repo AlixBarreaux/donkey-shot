@@ -33,13 +33,10 @@ func randomize_sprite_texture() -> void:
 
 
 func die() -> void:
-	Global.increase_current_score(self.score_value)
-	
-	# "Disable" the VisibilityNotifier2D in order to avoid triggering the
-	# screen_exited signal and decrease the current lives 
-	visibility_notifier_2d.disconnect("screen_exited", self, "_on_VisibilityNotifier2D_screen_exited")
+	Global.decrease_current_lives(1)
 	self.queue_free()
 
 
-func _on_VisibilityNotifier2D_screen_exited() -> void:
-	Global.decrease_current_lives(1)
+func mark_points() -> void:
+	Global.increase_current_score(self.score_value)
+	self.queue_free()
