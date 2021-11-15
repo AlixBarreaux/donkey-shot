@@ -80,5 +80,5 @@ func get_initial_lives() -> int:
 
 
 func on_game_restarted() -> void:
-	set_current_score(0)
+	set_current_score(get_initial_score())
 	set_current_lives(get_initial_lives())
