@@ -11,6 +11,7 @@ export (NodePath) var first_button_to_focus_node_path = null
 
 # Node References
 onready var first_button_to_focus: Button = get_node(first_button_to_focus_node_path)
+onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 # Signals to connect to
@@ -49,9 +50,6 @@ func _on_GameOverMenu_visibility_changed() -> void:
 	else:
 		self.first_button_to_focus.release_focus()
 
-
-
-onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func on_game_over() -> void:
 	self.show()
