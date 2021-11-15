@@ -59,7 +59,6 @@ func get_initial_score() -> int:
 func decrease_current_lives(value: int) -> void:
 	current_lives -= value
 	if get_current_lives() <= -1:
-		print("Less than 0 lives!")
 		set_current_lives(0)
 		Events.emit_signal("game_over")
 	else:

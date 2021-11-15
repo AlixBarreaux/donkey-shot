@@ -29,7 +29,6 @@ func on_game_started() -> void:
 
 
 func on_game_over() -> void:
-	print(self.name + ": Game over!")
 	self.stop()
 
 
