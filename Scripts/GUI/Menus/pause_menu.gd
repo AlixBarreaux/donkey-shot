@@ -94,6 +94,7 @@ func _on_OptionsButton_pressed() -> void:
 # Make sure the game isn't paused when on the MainMenu
 func _on_QuitToMainMenu_pressed() -> void:
 	get_tree().set_pause(false)
+	Events.emit_signal("game_restarted")
 
 
 # Prevent making self appear when the game is over

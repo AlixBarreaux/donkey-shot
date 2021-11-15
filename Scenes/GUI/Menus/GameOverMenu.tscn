@@ -84,3 +84,4 @@ bus = "Music"
 
 [connection signal="visibility_changed" from="." to="." method="_on_GameOverMenu_visibility_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/QuitToMainMenuButton" to="." method="_on_QuitToMainMenuButton_pressed"]

@@ -40,7 +40,13 @@ func _initialize() -> void:
 	self.first_button_to_focus.grab_focus()
 
 
+
+
 func _on_PlayAgainButton_pressed() -> void:
+	Events.emit_signal("game_restarted")
+
+
+func _on_QuitToMainMenuButton_pressed():
 	Events.emit_signal("game_restarted")
 
 
