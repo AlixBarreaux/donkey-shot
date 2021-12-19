@@ -12,8 +12,8 @@ var tutorial_enabled: bool = true setget set_tutorial_enabled, get_tutorial_enab
 
 
 func _ready() -> void:
-#	TranslationServer.set_locale(OS.get_locale())
-	TranslationServer.set_locale("fr_FR")
+	TranslationServer.set_locale(OS.get_locale())
+#	TranslationServer.set_locale("fr_FR")
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------

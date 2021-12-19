@@ -134,11 +134,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/score_gui.gd"
 }, {
-"base": "Timer",
-"class": "SpawningPaceTimer",
-"language": "GDScript",
-"path": "res://Scripts/spawning_pace_timer.gd"
-}, {
 "base": "Sprite",
 "class": "Turbine_Rotator",
 "language": "GDScript",
@@ -185,7 +180,6 @@ _global_script_class_icons={
 "QuitToDesktopButton": "",
 "SceneLoaderButton": "",
 "ScoreGUI": "",
-"SpawningPaceTimer": "",
 "Turbine_Rotator": "",
 "TutorialEnablerGUI": "",
 "TutorialMenu": "",
