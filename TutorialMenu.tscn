@@ -325,6 +325,22 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="SupportedDevicesLabel" type="Label" parent="MiddlePanelElements"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -399.5
+margin_top = -296.0
+margin_right = 399.5
+margin_bottom = -255.0
+text = "Supported Devices"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PauseLabel" type="Label" parent="MiddlePanelElements"]
 margin_top = 99.0
 margin_right = 427.0
