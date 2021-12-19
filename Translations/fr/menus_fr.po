@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-12-19 04:15+0100\n"
+"PO-Revision-Date: 2021-12-19 21:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -39,6 +39,9 @@ msgstr "vies: "
 msgid "master"
 msgstr "volume principal"
 
+msgid "move"
+msgstr "se déplacer"
+
 msgid "music"
 msgstr "musique"
 
@@ -69,6 +72,12 @@ msgstr "score: "
 
 msgid "sound effects"
 msgstr "effets sonores"
+
+msgid "devices"
+msgstr "périphériques"
+
+msgid "tutorial"
+msgstr "tutoriel"
 
 msgid "tutorial enabled"
 msgstr "tutoriel activé"
@@ -103,6 +112,9 @@ msgstr ""
 "\n"
 "Avec tous ces grains à porter à lui seul, arrivera t'il au moins à passer "
 "l’arcade de la porte du moulin?"
+
+#~ msgid "supported devices"
+#~ msgstr "périphériques"
 
 #~ msgid ""
 #~ "Cela devait arriver! À force de détériorer tous les moulins de la région, "

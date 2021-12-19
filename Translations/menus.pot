@@ -37,6 +37,9 @@ msgstr ""
 msgid "master"
 msgstr ""
 
+msgid "move"
+msgstr ""
+
 msgid "music"
 msgstr ""
 
@@ -65,6 +68,12 @@ msgid "score: "
 msgstr ""
 
 msgid "sound effects"
+msgstr ""
+
+msgid "devices"
+msgstr ""
+
+msgid "tutorial"
 msgstr ""
 
 msgid "tutorial enabled"
