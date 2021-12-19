@@ -49,15 +49,15 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="HBoxContainer2"]
 margin_top = 39.0
-margin_right = 348.0
+margin_right = 414.0
 margin_bottom = 80.0
-text = "do not ask me again"
+text = "do not show this again"
 align = 1
 valign = 1
 
 [node name="CheckBox" type="CheckBox" parent="HBoxContainer2"]
-margin_left = 398.0
-margin_right = 414.0
+margin_left = 464.0
+margin_right = 480.0
 margin_bottom = 120.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

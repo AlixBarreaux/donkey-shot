@@ -13,7 +13,13 @@ msgstr ""
 msgid "back"
 msgstr ""
 
+msgid "close"
+msgstr ""
+
 msgid "credits"
+msgstr ""
+
+msgid "do not show this again"
 msgstr ""
 
 msgid "fullscreen"
@@ -59,6 +65,9 @@ msgid "score: "
 msgstr ""
 
 msgid "sound effects"
+msgstr ""
+
+msgid "tutorial enabled"
 msgstr ""
 
 msgid "volume"

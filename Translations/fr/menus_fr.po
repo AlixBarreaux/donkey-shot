@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-11-07 20:57+0100\n"
+"PO-Revision-Date: 2021-12-19 04:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -15,8 +15,14 @@ msgstr ""
 msgid "back"
 msgstr "retour"
 
+msgid "close"
+msgstr "fermer"
+
 msgid "credits"
 msgstr "crédits"
+
+msgid "do not show this again"
+msgstr "ne plus montrer ceci à l'avenir"
 
 msgid "fullscreen"
 msgstr "plein écran"
@@ -63,6 +69,9 @@ msgstr "score: "
 
 msgid "sound effects"
 msgstr "effets sonores"
+
+msgid "tutorial enabled"
+msgstr "tutoriel activé"
 
 msgid "volume"
 msgstr "volume"
