@@ -1,8 +1,27 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=1]
+[ext_resource path="res://KeyboardTextureAutomaticLayoutGUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Themes/menu_default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://tutorial_menu.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Fonts/Font_Data/menu_default_dynamicfontdata.tres" type="DynamicFontData" id=5]
+[ext_resource path="res://KeyboardKeyTextureGUI.tscn" type="PackedScene" id=7]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/keyboard_key.svg-c53bd0bbb21953584ddcad4ce9ff6dac.stex"
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/keyboard_key.svg-c53bd0bbb21953584ddcad4ce9ff6dac.stex"
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 5 )
 
 [node name="TutorialMenu" type="Control"]
 anchor_right = 1.0
@@ -106,12 +125,69 @@ __meta__ = {
 margin_right = 427.0
 margin_bottom = 515.0
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="KeyboardTextureRect" type="TextureRect" parent="LeftPanel/VBoxContainer"]
-margin_right = 427.0
-margin_bottom = 515.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="MoveLeftKeyboardTextureAutomaticLayoutGUI" parent="LeftPanel" instance=ExtResource( 2 )]
+margin_left = 86.0
+margin_top = 418.0
+margin_right = 150.0
+margin_bottom = 482.0
+azerty_key = "Q"
+qwerty_key = "A"
+
+[node name="MoveRightKeyboardTextureGUI" parent="LeftPanel" instance=ExtResource( 7 )]
+margin_left = 253.0
+margin_top = 418.0
+margin_right = 317.0
+margin_bottom = 482.0
+
+[node name="Label" parent="LeftPanel/MoveRightKeyboardTextureGUI" index="0"]
+text = "D"
+
+[node name="MoveUpKeyboardTextureAutomaticLayoutGUI2" parent="LeftPanel" instance=ExtResource( 2 )]
+margin_left = 168.0
+margin_top = 330.0
+margin_right = 232.0
+margin_bottom = 394.0
+azerty_key = "Z"
+qwerty_key = "W"
+
+[node name="MoveDownKeyboardTextureGUI2" parent="LeftPanel" instance=ExtResource( 7 )]
+margin_left = 168.0
+margin_top = 418.0
+margin_right = 232.0
+margin_bottom = 482.0
+
+[node name="Label" parent="LeftPanel/MoveDownKeyboardTextureGUI2" index="0"]
+text = "S"
+
+[node name="MoveRightKeyboardTextureGUI3" parent="LeftPanel" instance=ExtResource( 7 )]
+margin_left = 116.0
+margin_top = 182.0
+margin_right = 180.0
+margin_bottom = 246.0
+texture = SubResource( 1 )
+
+[node name="Label" parent="LeftPanel/MoveRightKeyboardTextureGUI3" index="0"]
+margin_left = -14.5
+margin_top = -16.0
+margin_right = 14.5
+margin_bottom = 5.0
+custom_fonts/font = SubResource( 5 )
+text = "Esc"
+
+[node name="MoveRightKeyboardTextureGUI4" parent="LeftPanel" instance=ExtResource( 7 )]
+margin_left = 218.0
+margin_top = 182.0
+margin_right = 282.0
+margin_bottom = 246.0
+texture = SubResource( 3 )
+
+[node name="Label" parent="LeftPanel/MoveRightKeyboardTextureGUI4" index="0"]
+custom_fonts/font = SubResource( 4 )
+text = "P"
 
 [node name="MiddlePanel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -128,35 +204,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MiddlePanel"]
+[node name="PauseLabel" type="Label" parent="MiddlePanel"]
+margin_top = 198.0
 margin_right = 427.0
-margin_bottom = 515.0
-alignment = 1
+margin_bottom = 239.0
+text = "pause"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="KeyboardTextureRect" type="TextureRect" parent="MiddlePanel/VBoxContainer"]
+[node name="MoveLabel" type="Label" parent="MiddlePanel"]
+margin_top = 378.0
 margin_right = 427.0
-margin_bottom = 425.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="MiddlePanel/VBoxContainer"]
-margin_top = 429.0
-margin_right = 427.0
-margin_bottom = 470.0
-text = "pause"
-align = 1
-valign = 1
-
-[node name="Label2" type="Label" parent="MiddlePanel/VBoxContainer"]
-margin_top = 474.0
-margin_right = 427.0
-margin_bottom = 515.0
+margin_bottom = 419.0
 text = "move"
 align = 1
 valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MiddlePanel"]
+margin_left = -306.0
+margin_top = 72.0
+margin_right = 121.0
+margin_bottom = 587.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RightPanel" type="Panel" parent="."]
 anchor_left = 1.0
@@ -184,3 +259,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
+
+[editable path="LeftPanel/MoveRightKeyboardTextureGUI"]
+[editable path="LeftPanel/MoveDownKeyboardTextureGUI2"]
+[editable path="LeftPanel/MoveRightKeyboardTextureGUI3"]
+[editable path="LeftPanel/MoveRightKeyboardTextureGUI4"]
