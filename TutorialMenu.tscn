@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=1]
 [ext_resource path="res://KeyboardTextureAutomaticLayoutGUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Themes/menu_default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://tutorial_menu.gd" type="Script" id=4]
 [ext_resource path="res://Resources/Fonts/Font_Data/menu_default_dynamicfontdata.tres" type="DynamicFontData" id=5]
+[ext_resource path="res://keyboard_icon.png" type="Texture" id=6]
 [ext_resource path="res://KeyboardKeyTextureGUI.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StreamTexture" id=1]
@@ -114,63 +115,78 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -317.0
 margin_right = 427.0
-margin_bottom = 198.0
+margin_bottom = 266.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel"]
-margin_right = 427.0
-margin_bottom = 515.0
-alignment = 1
+[node name="MoveKeyboardKeys" type="Control" parent="LeftPanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -104.0
+margin_right = 34.5
+margin_bottom = -64.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MoveLeftKeyboardTextureAutomaticLayoutGUI" parent="LeftPanel" instance=ExtResource( 2 )]
-margin_left = 86.0
-margin_top = 418.0
-margin_right = 150.0
-margin_bottom = 482.0
+[node name="MoveLeftKeyboardTextureAutomaticLayoutGUI" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 2 )]
+margin_left = -114.0
+margin_top = 8.0
+margin_right = -50.0
+margin_bottom = 72.0
 azerty_key = "Q"
 qwerty_key = "A"
 
-[node name="MoveRightKeyboardTextureGUI" parent="LeftPanel" instance=ExtResource( 7 )]
-margin_left = 253.0
-margin_top = 418.0
-margin_right = 317.0
-margin_bottom = 482.0
+[node name="MoveRightKeyboardTextureGUI" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 7 )]
+margin_left = 53.0
+margin_top = 8.0
+margin_right = 117.0
+margin_bottom = 72.0
 
-[node name="Label" parent="LeftPanel/MoveRightKeyboardTextureGUI" index="0"]
+[node name="Label" parent="LeftPanel/MoveKeyboardKeys/MoveRightKeyboardTextureGUI" index="0"]
 text = "D"
 
-[node name="MoveUpKeyboardTextureAutomaticLayoutGUI2" parent="LeftPanel" instance=ExtResource( 2 )]
-margin_left = 168.0
-margin_top = 330.0
-margin_right = 232.0
-margin_bottom = 394.0
+[node name="MoveUpKeyboardTextureAutomaticLayoutGUI2" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 2 )]
+margin_left = -32.0
+margin_top = -76.0
+margin_right = 32.0
+margin_bottom = -12.0
 azerty_key = "Z"
 qwerty_key = "W"
 
-[node name="MoveDownKeyboardTextureGUI2" parent="LeftPanel" instance=ExtResource( 7 )]
-margin_left = 168.0
-margin_top = 418.0
-margin_right = 232.0
-margin_bottom = 482.0
+[node name="MoveDownKeyboardTextureGUI2" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 7 )]
+margin_left = -30.5
+margin_top = 8.0
+margin_right = 33.5
+margin_bottom = 72.0
 
-[node name="Label" parent="LeftPanel/MoveDownKeyboardTextureGUI2" index="0"]
+[node name="Label" parent="LeftPanel/MoveKeyboardKeys/MoveDownKeyboardTextureGUI2" index="0"]
 text = "S"
 
-[node name="MoveRightKeyboardTextureGUI3" parent="LeftPanel" instance=ExtResource( 7 )]
-margin_left = 116.0
-margin_top = 182.0
-margin_right = 180.0
-margin_bottom = 246.0
+[node name="PauseKeyboardKeys" type="HBoxContainer" parent="LeftPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.0
+margin_top = -32.0
+margin_right = 89.0
+margin_bottom = 32.0
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausePrimaryMoveRightKeyboardTextureGUI3" parent="LeftPanel/PauseKeyboardKeys" instance=ExtResource( 7 )]
 texture = SubResource( 1 )
 
-[node name="Label" parent="LeftPanel/MoveRightKeyboardTextureGUI3" index="0"]
+[node name="Label" parent="LeftPanel/PauseKeyboardKeys/PausePrimaryMoveRightKeyboardTextureGUI3" index="0"]
 margin_left = -14.5
 margin_top = -16.0
 margin_right = 14.5
@@ -178,16 +194,26 @@ margin_bottom = 5.0
 custom_fonts/font = SubResource( 5 )
 text = "Esc"
 
-[node name="MoveRightKeyboardTextureGUI4" parent="LeftPanel" instance=ExtResource( 7 )]
-margin_left = 218.0
-margin_top = 182.0
-margin_right = 282.0
-margin_bottom = 246.0
+[node name="PauseSecondaryRightKeyboardTextureGUI4" parent="LeftPanel/PauseKeyboardKeys" instance=ExtResource( 7 )]
+margin_left = 114.0
+margin_right = 178.0
 texture = SubResource( 3 )
 
-[node name="Label" parent="LeftPanel/MoveRightKeyboardTextureGUI4" index="0"]
+[node name="Label" parent="LeftPanel/PauseKeyboardKeys/PauseSecondaryRightKeyboardTextureGUI4" index="0"]
 custom_fonts/font = SubResource( 4 )
 text = "P"
+
+[node name="TextureRect" type="TextureRect" parent="LeftPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -96.0
+margin_top = 58.0
+margin_right = 96.0
+margin_bottom = 178.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MiddlePanel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -197,7 +223,7 @@ anchor_bottom = 0.5
 margin_left = -213.0
 margin_top = -317.0
 margin_right = 214.0
-margin_bottom = 198.0
+margin_bottom = 266.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -205,9 +231,9 @@ __meta__ = {
 }
 
 [node name="PauseLabel" type="Label" parent="MiddlePanel"]
-margin_top = 198.0
+margin_top = 276.0
 margin_right = 427.0
-margin_bottom = 239.0
+margin_bottom = 317.0
 text = "pause"
 align = 1
 valign = 1
@@ -216,9 +242,9 @@ __meta__ = {
 }
 
 [node name="MoveLabel" type="Label" parent="MiddlePanel"]
-margin_top = 378.0
+margin_top = 450.0
 margin_right = 427.0
-margin_bottom = 419.0
+margin_bottom = 491.0
 text = "move"
 align = 1
 valign = 1
@@ -240,27 +266,16 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -427.0
 margin_top = -317.0
-margin_bottom = 198.0
+margin_bottom = 266.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="RightPanel"]
-margin_right = 427.0
-margin_bottom = 515.0
-alignment = 1
-
-[node name="KeyboardTextureRect" type="TextureRect" parent="RightPanel/VBoxContainer"]
-margin_right = 427.0
-margin_bottom = 515.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
 [connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
 
-[editable path="LeftPanel/MoveRightKeyboardTextureGUI"]
-[editable path="LeftPanel/MoveDownKeyboardTextureGUI2"]
-[editable path="LeftPanel/MoveRightKeyboardTextureGUI3"]
-[editable path="LeftPanel/MoveRightKeyboardTextureGUI4"]
+[editable path="LeftPanel/MoveKeyboardKeys/MoveRightKeyboardTextureGUI"]
+[editable path="LeftPanel/MoveKeyboardKeys/MoveDownKeyboardTextureGUI2"]
+[editable path="LeftPanel/PauseKeyboardKeys/PausePrimaryMoveRightKeyboardTextureGUI3"]
+[editable path="LeftPanel/PauseKeyboardKeys/PauseSecondaryRightKeyboardTextureGUI4"]
