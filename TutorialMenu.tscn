@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=1]
 [ext_resource path="res://KeyboardTextureAutomaticLayoutGUI.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://KeyboardKeyTextureGUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://gamepad_icon.png" type="Texture" id=8]
 [ext_resource path="res://controller_key_analog_stick_icon.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.27451, 0.270588, 0.270588, 1 )
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -124,6 +127,7 @@ __meta__ = {
 }
 
 [node name="LeftPanel" type="Panel" parent="."]
+visible = false
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -317.0
@@ -135,100 +139,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MoveKeyboardKeys" type="Control" parent="LeftPanel"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -104.0
-margin_right = 34.5
-margin_bottom = -64.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MoveLeftKeyboardTextureAutomaticLayoutGUI" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 2 )]
-margin_left = -114.0
-margin_top = 8.0
-margin_right = -50.0
-margin_bottom = 72.0
-azerty_key = "Q"
-qwerty_key = "A"
-
-[node name="MoveRightKeyboardTextureGUI" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 7 )]
-margin_left = 53.0
-margin_top = 8.0
-margin_right = 117.0
-margin_bottom = 72.0
-
-[node name="Label" parent="LeftPanel/MoveKeyboardKeys/MoveRightKeyboardTextureGUI" index="0"]
-text = "D"
-
-[node name="MoveUpKeyboardTextureAutomaticLayoutGUI2" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 2 )]
-margin_left = -32.0
-margin_top = -76.0
-margin_right = 32.0
-margin_bottom = -12.0
-azerty_key = "Z"
-qwerty_key = "W"
-
-[node name="MoveDownKeyboardTextureGUI2" parent="LeftPanel/MoveKeyboardKeys" instance=ExtResource( 7 )]
-margin_left = -30.5
-margin_top = 8.0
-margin_right = 33.5
-margin_bottom = 72.0
-
-[node name="Label" parent="LeftPanel/MoveKeyboardKeys/MoveDownKeyboardTextureGUI2" index="0"]
-text = "S"
-
-[node name="PauseKeyboardKeys" type="HBoxContainer" parent="LeftPanel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -89.0
-margin_top = -32.0
-margin_right = 89.0
-margin_bottom = 32.0
-custom_constants/separation = 50
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PausePrimaryMoveRightKeyboardTextureGUI3" parent="LeftPanel/PauseKeyboardKeys" instance=ExtResource( 7 )]
-texture = SubResource( 1 )
-
-[node name="Label" parent="LeftPanel/PauseKeyboardKeys/PausePrimaryMoveRightKeyboardTextureGUI3" index="0"]
-margin_left = -14.5
-margin_top = -16.0
-margin_right = 14.5
-margin_bottom = 5.0
-custom_fonts/font = SubResource( 5 )
-text = "Esc"
-
-[node name="PauseSecondaryRightKeyboardTextureGUI4" parent="LeftPanel/PauseKeyboardKeys" instance=ExtResource( 7 )]
-margin_left = 114.0
-margin_right = 178.0
-texture = SubResource( 3 )
-
-[node name="Label" parent="LeftPanel/PauseKeyboardKeys/PauseSecondaryRightKeyboardTextureGUI4" index="0"]
-custom_fonts/font = SubResource( 4 )
-text = "P"
-
-[node name="TextureRect" type="TextureRect" parent="LeftPanel"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -96.0
-margin_top = 58.0
-margin_right = 96.0
-margin_bottom = 178.0
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MiddlePanel" type="Panel" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -243,36 +155,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PauseLabel" type="Label" parent="MiddlePanel"]
-margin_top = 84.0
-margin_right = 427.0
-margin_bottom = 125.0
-text = "pause"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MoveLabel" type="Label" parent="MiddlePanel"]
-margin_top = 272.0
-margin_right = 427.0
-margin_bottom = 313.0
-text = "move"
-align = 1
-valign = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MiddlePanel"]
-margin_left = -306.0
-margin_top = 72.0
-margin_right = 121.0
-margin_bottom = 587.0
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="RightPanel" type="Panel" parent="."]
+visible = false
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -286,7 +170,199 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="RightPanel"]
+[node name="Panel" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -55.0
+margin_bottom = 39.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -282.0
+margin_bottom = -120.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 74.0
+margin_bottom = 244.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftPanelElements" type="Control" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -317.0
+margin_right = 427.0
+margin_bottom = 266.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="MoveKeyboardKeys" type="Control" parent="LeftPanelElements"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_top = -106.0
+margin_bottom = -106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLeftKeyboardTextureAutomaticLayoutGUI" parent="LeftPanelElements/MoveKeyboardKeys" instance=ExtResource( 2 )]
+margin_left = -114.0
+margin_top = 8.0
+margin_right = -50.0
+margin_bottom = 72.0
+azerty_key = "Q"
+qwerty_key = "A"
+
+[node name="MoveRightKeyboardTextureGUI" parent="LeftPanelElements/MoveKeyboardKeys" instance=ExtResource( 7 )]
+margin_left = 53.0
+margin_top = 8.0
+margin_right = 117.0
+margin_bottom = 72.0
+
+[node name="Label" parent="LeftPanelElements/MoveKeyboardKeys/MoveRightKeyboardTextureGUI" index="0"]
+text = "D"
+
+[node name="MoveUpKeyboardTextureAutomaticLayoutGUI2" parent="LeftPanelElements/MoveKeyboardKeys" instance=ExtResource( 2 )]
+margin_left = -32.0
+margin_top = -76.0
+margin_right = 32.0
+margin_bottom = -12.0
+azerty_key = "Z"
+qwerty_key = "W"
+
+[node name="MoveDownKeyboardTextureGUI2" parent="LeftPanelElements/MoveKeyboardKeys" instance=ExtResource( 7 )]
+margin_left = -30.5
+margin_top = 8.0
+margin_right = 33.5
+margin_bottom = 72.0
+
+[node name="Label" parent="LeftPanelElements/MoveKeyboardKeys/MoveDownKeyboardTextureGUI2" index="0"]
+text = "S"
+
+[node name="PauseKeyboardKeys" type="HBoxContainer" parent="LeftPanelElements"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.0
+margin_top = -15.5
+margin_right = 89.0
+margin_bottom = 48.5
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausePrimaryMoveRightKeyboardTextureGUI3" parent="LeftPanelElements/PauseKeyboardKeys" instance=ExtResource( 7 )]
+texture = SubResource( 1 )
+
+[node name="Label" parent="LeftPanelElements/PauseKeyboardKeys/PausePrimaryMoveRightKeyboardTextureGUI3" index="0"]
+margin_left = -14.5
+margin_top = -16.0
+margin_right = 14.5
+margin_bottom = 5.0
+custom_fonts/font = SubResource( 5 )
+text = "Esc"
+
+[node name="PauseSecondaryRightKeyboardTextureGUI4" parent="LeftPanelElements/PauseKeyboardKeys" instance=ExtResource( 7 )]
+margin_left = 114.0
+margin_right = 178.0
+texture = SubResource( 3 )
+
+[node name="Label" parent="LeftPanelElements/PauseKeyboardKeys/PauseSecondaryRightKeyboardTextureGUI4" index="0"]
+custom_fonts/font = SubResource( 4 )
+text = "P"
+
+[node name="KeyboardIcon" type="TextureRect" parent="LeftPanelElements"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -96.0
+margin_top = 51.0
+margin_right = 96.0
+margin_bottom = 171.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiddlePanelElements" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -213.0
+margin_top = -122.0
+margin_right = 214.0
+margin_bottom = 266.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="PauseLabel" type="Label" parent="MiddlePanelElements"]
+margin_top = 99.0
+margin_right = 427.0
+margin_bottom = 140.0
+text = "pause"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLabel" type="Label" parent="MiddlePanelElements"]
+margin_top = 257.0
+margin_right = 427.0
+margin_bottom = 298.0
+text = "move"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightPanelElements" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -427.0
+margin_top = -317.0
+margin_bottom = 266.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="RightPanelElements"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -96.0
@@ -298,21 +374,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StartGamepadKey" type="Panel" parent="RightPanel"]
+[node name="StartGamepadKey" type="Panel" parent="RightPanelElements"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -52.0
-margin_top = -23.0
+margin_top = -3.5
 margin_right = 52.0
-margin_bottom = 23.0
+margin_bottom = 42.5
 custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="RightPanel/StartGamepadKey"]
+[node name="Label" type="Label" parent="RightPanelElements/StartGamepadKey"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -330,7 +406,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="MoveGamepadKey" type="TextureRect" parent="RightPanel"]
+[node name="MoveGamepadKey" type="TextureRect" parent="RightPanelElements"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -340,8 +416,11 @@ margin_top = -163.0
 margin_right = 48.0
 margin_bottom = -67.0
 texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="RightPanel/MoveGamepadKey"]
+[node name="Label" type="Label" parent="RightPanelElements/MoveGamepadKey"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -359,7 +438,7 @@ __meta__ = {
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
 
-[editable path="LeftPanel/MoveKeyboardKeys/MoveRightKeyboardTextureGUI"]
-[editable path="LeftPanel/MoveKeyboardKeys/MoveDownKeyboardTextureGUI2"]
-[editable path="LeftPanel/PauseKeyboardKeys/PausePrimaryMoveRightKeyboardTextureGUI3"]
-[editable path="LeftPanel/PauseKeyboardKeys/PauseSecondaryRightKeyboardTextureGUI4"]
+[editable path="LeftPanelElements/MoveKeyboardKeys/MoveRightKeyboardTextureGUI"]
+[editable path="LeftPanelElements/MoveKeyboardKeys/MoveDownKeyboardTextureGUI2"]
+[editable path="LeftPanelElements/PauseKeyboardKeys/PausePrimaryMoveRightKeyboardTextureGUI3"]
+[editable path="LeftPanelElements/PauseKeyboardKeys/PauseSecondaryRightKeyboardTextureGUI4"]
