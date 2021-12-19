@@ -8,17 +8,33 @@ extends Control
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
+# Node References
+onready var disappear_timer: Timer = $DisappearTimer
+
+
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
+	Events.connect("game_initialized", self, "on_game_initialized")
+	]
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 
-
-func _ready() -> void:
-	self.show()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 
+func initialize() -> void:
+	self.show()
+	disappear_timer.start()
+
+
 func _on_DisappearTimer_timeout() -> void:
 	self.hide()
 	Events.emit_signal("game_started")
+
+
+
+func on_game_initialized() -> void:
+	self.initialize()

@@ -19,7 +19,4 @@ func _on_CloseButton_pressed():
 	Settings.set_tutorial_enabled(!checkbox.pressed)
 	
 	self.hide()
-
-
-func on_game_over() -> void:
-	self.show()
+	Events.emit_signal("game_initialized")

@@ -6,6 +6,8 @@ extends Node
 
 
 # warning-ignore: unused_signal
+signal game_initialized
+# warning-ignore: unused_signal
 signal game_started
 # warning-ignore: unused_signal
 signal game_over

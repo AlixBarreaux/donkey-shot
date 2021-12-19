@@ -4,7 +4,9 @@ extends Node
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
 var tutorial_enabled: bool = true setget set_tutorial_enabled, get_tutorial_enabled
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -19,7 +21,6 @@ func _ready() -> void:
 # Tutorial Enabled
 func set_tutorial_enabled(value: bool) -> void:
 	tutorial_enabled = value
-	print("Tutorial enabled: " + str(self.get_tutorial_enabled()))
 
 
 func get_tutorial_enabled():
