@@ -11,7 +11,7 @@ extends Label
 
 
 func _ready() -> void:
-	self.text = "V " + str(ProjectSettings.get_setting("application/config/version"))
+	self.text = "V " + ProjectSettings.get_setting("application/config/version")
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
