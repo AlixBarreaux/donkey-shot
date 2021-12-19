@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Themes/menu_label_title_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/GUI/Menus/options_menu.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/GUI/Volume_Controllers/MusicVolumeControllerGUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/Volume_Controllers/SoundEffectsVolumeControllerGUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/GUI/FullScreenControllerGUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TutorialEnablerGUI.tscn" type="PackedScene" id=8]
 
 [node name="OptionsMenu" type="Control"]
 anchor_right = 1.0
@@ -67,9 +68,9 @@ __meta__ = {
 }
 
 [node name="FullScreenController" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 129.0
+margin_top = 88.0
 margin_right = 1483.0
-margin_bottom = 170.0
+margin_bottom = 129.0
 
 [node name="Label" parent="ScrollContainer/VBoxContainer/FullScreenController" index="0"]
 margin_right = 1415.0
@@ -85,9 +86,9 @@ focus_neighbour_right = NodePath("../../MasterVolumeControllerGUI/HSlider")
 focus_neighbour_bottom = NodePath("../../MasterVolumeControllerGUI/HSlider")
 
 [node name="VolumeLabel" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 210.0
+margin_top = 169.0
 margin_right = 1483.0
-margin_bottom = 251.0
+margin_bottom = 210.0
 text = "volume"
 align = 1
 valign = 1
@@ -95,9 +96,9 @@ valign = 1
 [node name="MasterVolumeControllerGUI" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 291.0
+margin_top = 250.0
 margin_right = 1483.0
-margin_bottom = 332.0
+margin_bottom = 291.0
 
 [node name="Label" parent="ScrollContainer/VBoxContainer/MasterVolumeControllerGUI" index="0"]
 margin_top = 0.0
@@ -116,9 +117,9 @@ focus_neighbour_bottom = NodePath("../../MusicVolumeControllerGUI/HSlider")
 [node name="MusicVolumeControllerGUI" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 372.0
+margin_top = 331.0
 margin_right = 1483.0
-margin_bottom = 413.0
+margin_bottom = 372.0
 
 [node name="Label" parent="ScrollContainer/VBoxContainer/MusicVolumeControllerGUI" index="0"]
 margin_top = 0.0
@@ -137,9 +138,9 @@ focus_neighbour_bottom = NodePath("../../SoundEffectsVolumeControllerGUI/HSlider
 [node name="SoundEffectsVolumeControllerGUI" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 453.0
+margin_top = 412.0
 margin_right = 1483.0
-margin_bottom = 494.0
+margin_bottom = 453.0
 
 [node name="Label" parent="ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI" index="0"]
 margin_top = 0.0
@@ -154,6 +155,11 @@ focus_neighbour_left = NodePath("../../MusicVolumeControllerGUI/HSlider")
 focus_neighbour_top = NodePath("../../MusicVolumeControllerGUI/HSlider")
 focus_neighbour_right = NodePath("../../../../BackButton")
 focus_neighbour_bottom = NodePath("../../../../BackButton")
+
+[node name="TutorialEnablerGUI" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 493.0
+margin_right = 1483.0
+margin_bottom = 534.0
 
 [node name="BackButton" type="Button" parent="."]
 anchor_left = 0.5
