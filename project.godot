@@ -149,7 +149,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/tutorial_enabler_gui.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "TutorialMenu",
 "language": "GDScript",
 "path": "res://Scripts/GUI/Menus/tutorial_menu.gd"

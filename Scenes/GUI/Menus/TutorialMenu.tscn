@@ -15,7 +15,6 @@ bg_color = Color( 0.27451, 0.270588, 0.270588, 1 )
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/keyboard_key.svg-c53bd0bbb21953584ddcad4ce9ff6dac.stex"
 
 [sub_resource type="DynamicFont" id=5]
 size = 20
@@ -23,7 +22,6 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StreamTexture" id=3]
 flags = 4
-load_path = "res://.import/keyboard_key.svg-c53bd0bbb21953584ddcad4ce9ff6dac.stex"
 
 [sub_resource type="DynamicFont" id=4]
 size = 25
