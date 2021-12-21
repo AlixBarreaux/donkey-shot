@@ -7,12 +7,12 @@
 [ext_resource path="res://Scenes/GUI/Menus/PauseMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/Menus/GetReadyMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/GUI/Menus/GameOverMenu.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Sprites/background_in_game.png" type="Texture" id=8]
-[ext_resource path="res://game.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Sprites/World/background_in_game.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/game.gd" type="Script" id=9]
 
 [node name="Game" type="Node"]
 script = ExtResource( 9 )
-tutorial_menu_scene_path = "res://TutorialMenu.tscn"
+tutorial_menu_scene_path = "res://Scenes/GUI/Menus/TutorialMenu.tscn"
 
 [node name="InGameGUICanvasLayer" type="CanvasLayer" parent="."]
 layer = -1

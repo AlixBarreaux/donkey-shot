@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Game",
 "language": "GDScript",
-"path": "res://game.gd"
+"path": "res://Scripts/game.gd"
 }, {
 "base": "Control",
 "class": "GameOverMenu",
@@ -57,7 +57,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "KeyboardLayoutLabelSetter",
 "language": "GDScript",
-"path": "res://keyboard_layout_label_setter.gd"
+"path": "res://Scripts/GUI/keyboard_layout_label_setter.gd"
 }, {
 "base": "HBoxContainer",
 "class": "LivesGUI",
@@ -147,12 +147,12 @@ _global_script_classes=[ {
 "base": "HBoxContainer",
 "class": "TutorialEnablerGUI",
 "language": "GDScript",
-"path": "res://tutorial_enabler_gui.gd"
+"path": "res://Scripts/GUI/tutorial_enabler_gui.gd"
 }, {
-"base": "Control",
+"base": "Reference",
 "class": "TutorialMenu",
 "language": "GDScript",
-"path": "res://tutorial_menu.gd"
+"path": "res://Scripts/GUI/Menus/tutorial_menu.gd"
 }, {
 "base": "Control",
 "class": "VolumeController",

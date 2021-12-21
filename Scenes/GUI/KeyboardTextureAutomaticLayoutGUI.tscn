@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/GUI/KeyboardKeyTextureGUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/GUI/keyboard_layout_label_setter.gd" type="Script" id=2]
+
+[node name="KeyboardTextureAutomaticLayoutGUI" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
