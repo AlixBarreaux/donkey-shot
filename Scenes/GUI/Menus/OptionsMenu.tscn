@@ -73,11 +73,11 @@ margin_right = 1483.0
 margin_bottom = 129.0
 
 [node name="Label" parent="ScrollContainer/VBoxContainer/FullScreenController" index="0"]
-margin_right = 1415.0
+margin_right = 1383.0
 margin_bottom = 41.0
 
 [node name="CheckButton" parent="ScrollContainer/VBoxContainer/FullScreenController" index="1"]
-margin_left = 1419.0
+margin_left = 1387.0
 margin_right = 1483.0
 margin_bottom = 41.0
 focus_neighbour_left = NodePath("../../../../BackButton")
@@ -166,11 +166,11 @@ focus_neighbour_right = NodePath("../../../BackButton")
 focus_neighbour_bottom = NodePath("../../../BackButton")
 
 [node name="Label" parent="ScrollContainer/VBoxContainer/TutorialEnablerGUI" index="0"]
-margin_right = 1415.0
+margin_right = 1383.0
 margin_bottom = 41.0
 
 [node name="CheckButton" parent="ScrollContainer/VBoxContainer/TutorialEnablerGUI" index="1"]
-margin_left = 1419.0
+margin_left = 1387.0
 margin_right = 1483.0
 margin_bottom = 41.0
 

@@ -1,7 +1,11 @@
-[gd_resource type="Theme" load_steps=11 format=2]
+[gd_resource type="Theme" load_steps=15 format=2]
 
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts/menu_default_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Fonts/Font_Data/menu_default_dynamicfontdata.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://check_button_checked.png" type="Texture" id=3]
+[ext_resource path="res://check_button_unchecked.png" type="Texture" id=4]
+[ext_resource path="res://checkbox_unchecked.png" type="Texture" id=5]
+[ext_resource path="res://checkbox_checked.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.698039, 0.698039, 0.698039, 1 )
@@ -41,6 +45,8 @@ Button/styles/focus = SubResource( 1 )
 Button/styles/hover = SubResource( 8 )
 Button/styles/normal = SubResource( 2 )
 Button/styles/pressed = null
+CheckBox/icons/checked = ExtResource( 6 )
+CheckBox/icons/unchecked = ExtResource( 5 )
 CheckButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 CheckButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 CheckButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -49,9 +55,9 @@ CheckButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 CheckButton/constants/check_vadjust = 0
 CheckButton/constants/hseparation = 4
 CheckButton/fonts/font = null
-CheckButton/icons/off = null
+CheckButton/icons/off = ExtResource( 4 )
 CheckButton/icons/off_disabled = null
-CheckButton/icons/on = null
+CheckButton/icons/on = ExtResource( 3 )
 CheckButton/icons/on_disabled = null
 CheckButton/styles/disabled = null
 CheckButton/styles/focus = SubResource( 3 )

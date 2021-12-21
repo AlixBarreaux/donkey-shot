@@ -94,8 +94,9 @@ valign = 1
 
 [node name="CheckBox" type="CheckBox" parent="HBoxContainer"]
 margin_left = 464.0
-margin_right = 480.0
+margin_right = 528.0
 margin_bottom = 120.0
+rect_min_size = Vector2( 32, 32 )
 focus_neighbour_left = NodePath("../../CloseButton")
 focus_neighbour_top = NodePath("../../CloseButton")
 focus_neighbour_right = NodePath("../../CloseButton")
