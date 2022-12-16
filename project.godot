@@ -99,12 +99,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/projectile.gd"
 }, {
-"base": "Reference",
+"base": "Area2D",
 "class": "ProjectileDetectorDying",
 "language": "GDScript",
 "path": "res://Scripts/projectile_detector_dying.gd"
 }, {
-"base": "Reference",
+"base": "Area2D",
 "class": "ProjectileDetectorScoring",
 "language": "GDScript",
 "path": "res://Scripts/projectile_detector_scoring.gd"

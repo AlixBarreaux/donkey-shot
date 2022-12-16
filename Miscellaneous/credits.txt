@@ -1,5 +1,5 @@
 The licenses embedded in this document have been reviewed for the last time at this date:
-31/10/2021 00:03 UTC +2
+16/12/2023 00:03 UTC +2
 
 This whole game and its code are released under a MIT license EXCLUDING the assets  with their own license cited below in this document.
 
