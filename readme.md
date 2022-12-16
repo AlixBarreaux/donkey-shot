@@ -1,5 +1,5 @@
 # Description
-One of my first Godot projects made years ago.
+An arcade game made with Godot Engine in a game jam.
 
 
 # Setup
